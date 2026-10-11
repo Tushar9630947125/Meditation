@@ -340,8 +340,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const fname = getVal(appForm, 'appFname', 'First Name');
             const lname = getVal(appForm, 'appLname', 'Last Name');
             const email = getVal(appForm, 'appEmail', 'Email');
-            const date = getVal(appForm, 'appDate', 'Preferred Date');
-            const time = getVal(appForm, 'appTime', 'Preferred Time');
             const service = getVal(appForm, 'appService', 'Service');
 
             let fullPhone = "";
@@ -352,14 +350,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const whatsappNumber = "918319440047";
-            const message = `Namaste Mission Lakshya! 🙏%0A%0AMujhe ek Appointment book karni hai.%0A%0A*Details:*%0AName: ${fname} ${lname}%0AService: ${service}%0ADate: ${date}%0ATime: ${time}%0A%0A*Contact Info:*%0AEmail: ${email}%0APhone: ${fullPhone}`;
+            const message = `Namaste Mission Lakshya! 🙏%0A%0AMujhe ek Appointment book karni hai.%0A%0A*Details:*%0AName: ${fname} ${lname}%0AService: %0A%0A*Contact Info:*%0AEmail: ${email}%0APhone: ${fullPhone}`;
 
             window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
             appForm.reset();
             closeModal();
         });
     }
-
+ 
     // =========================================
     // 11. ACCORDION LOGIC (TERMS PAGE)
     // =========================================
