@@ -1,0 +1,651 @@
+<!doctype html>
+<!-- Horizontal Overflow (Right Gap) Strict Fix -->
+<html lang="en" class="overflow-x-hidden max-w-[100vw]">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>About Us - Blessing Welfare Society</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- iOS Safari Font Fix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    
+    <style>
+        /* Strict Mobile Gap Fixes */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            max-width: 100vw !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body, p, h1, h2, h3, h4, h5, h6, input, button, select, textarea, a, span {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        }
+        .cursive-font, .font-great-vibes {
+            font-family: 'Great Vibes', cursive !important;
+        }
+        
+        /* Interactive Rose Hover Animation */
+        .interactive-rose {
+            transition: all 0.5s ease-in-out;
+            filter: drop-shadow(0 0 0 rgba(161, 119, 42, 0));
+        }
+        .interactive-rose:hover {
+            opacity: 0.4 !important;
+            transform: scale(1.05) rotate(5deg) !important;
+            filter: drop-shadow(0 0 15px rgba(161, 119, 42, 0.4));
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8E6C2] overflow-x-hidden w-full max-w-[100vw] m-0 p-0 font-['Poppins']">
+
+    <!-- Optimized Electric Animation Filter (Smooth & Non-blocking) -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none; z-index: -1;" aria-hidden="true">
+        <defs>
+            <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise1" seed="1" />
+                <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+                    <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                </feOffset>
+                <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise2" seed="1" />
+                <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+                    <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                </feOffset>
+                <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise1" seed="2" />
+                <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+                    <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                </feOffset>
+                <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise2" seed="2" />
+                <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+                    <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                </feOffset>
+                <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+                <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+                <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+                <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="20" xChannelSelector="R" yChannelSelector="B" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- ========================================== -->
+    <!--            1. NAVBAR SECTION               -->
+    <!-- ========================================== -->
+    <nav class="bg-[#566e4a] text-white px-4 md:px-8 py-3 flex justify-between items-center w-full sticky top-0 z-[1000] shadow-md font-['Poppins']">
+        
+        <!-- Logo Section (Fixed for Mobile & Tab) -->
+        <a href="index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer hover:opacity-90 transition-opacity max-w-[85%]">
+            <div class="w-9 h-9 md:w-12 md:h-12 bg-[#f6c358] shrink-0" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+            
+            <div class="flex flex-col justify-center">
+                <span class="cursive-font text-[20px] sm:text-2xl md:text-3xl leading-[1.1] md:leading-none tracking-wide text-[#f6c358] mb-[2px]">Blessing Welfare Society</span>
+                <span class="text-[6.5px] sm:text-[7.5px] md:text-[9px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-gray-200">People • Purpose • Positive Change</span>
+            </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="hidden xl:flex items-center gap-7 text-[13px] font-medium tracking-wide">
+            <li><a href="index.html" class="hover:text-[#f6c358] transition-colors">Home</a></li>
+            <li class="border-b-2 border-[#f6c358] pb-1"><a href="about.html" class="text-[#f6c358] hover:text-[#f6c358] transition-colors">About Us</a></li>
+            <li><a href="terms.html" class="hover:text-[#f6c358] transition-colors">Terms & Policies</a></li>
+            <li><a href="blog.html" class="hover:text-[#f6c358] transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-[#f6c358] transition-colors">Contact Us</a></li>
+        </ul>
+
+        <!-- Right Side CTAs -->
+        <div class="hidden lg:flex items-center gap-3">
+            <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-bold hover:bg-[#f6c358] hover:text-[#2b4222] transition-all shadow-md">
+                <i class="fa-solid fa-phone-volume animate-pulse"></i> Call Now
+            </a>
+            <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-1.5 rounded-full flex flex-col items-center justify-center shadow-md hover:bg-[#e3b046] transition-transform hover:scale-105">
+                <span class="font-bold flex gap-2 items-center text-[14px]">
+                    <i class="fa-solid fa-heart text-red-600"></i> Donate
+                </span>
+                <span class="text-[9px] font-medium tracking-wider">Support Us</span>
+            </a>
+            <button id="desktopBookBtn" class="border-[1.5px] border-white/80 px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-medium hover:bg-white hover:text-[#566e4a] transition-all">
+                <i class="fa-regular fa-calendar-check"></i> Book Session
+            </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (Forced to the right) -->
+        <button id="openMobileMenu" class="xl:hidden text-[#f6c358] text-2xl focus:outline-none shrink-0 ml-auto">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-[#566e4a] z-[2000] flex flex-col transform translate-x-full transition-transform duration-500 ease-in-out xl:hidden overflow-y-auto">
+        <button id="closeMobileMenu" class="absolute top-6 right-6 p-2 text-[#f6c358] hover:text-white transition-colors">
+            <i class="fa-solid fa-xmark text-3xl"></i>
+        </button>
+        
+        <div class="mt-20 flex flex-col gap-4 px-6 w-full">
+            <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+                <i class="fa-solid fa-phone-volume"></i> Call Now
+            </a>
+            <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+                <i class="fa-solid fa-heart text-red-600"></i> Donate Now
+            </a>
+            <button id="mobileBookBtn" class="border border-white text-white px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-medium w-full">
+                <i class="fa-regular fa-calendar-check"></i> Book Appointment
+            </button>
+        </div>
+        
+        <nav class="flex flex-col items-center w-full mt-10 gap-6 text-white text-xl font-medium tracking-wide pb-10">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="text-[#f6c358]">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="terms.html">Terms & Policies</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </div>
+
+    <!-- ========================================== -->
+    <!--           ABOUT US - REDESIGNED             -->
+    <!-- ========================================== -->
+    <section id="about" class="relative overflow-hidden bg-[#fbfaf5] px-5 py-14 sm:px-8 sm:py-18 lg:px-10 lg:py-12">
+
+        <!-- Soft decorative background -->
+        <div class="pointer-events-none absolute -left-24 top-16 h-72 w-72 rounded-full bg-[#eef0df]/70 blur-3xl"></div>
+        <div class="pointer-events-none absolute -right-28 bottom-0 h-80 w-80 rounded-full bg-[#f5ead0]/70 blur-3xl"></div>
+
+        <div class="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
+
+            <!-- ================= IMAGE COLLAGE ================= -->
+            <div class="relative mx-auto h-[440px] w-full max-w-[560px] sm:h-[500px] lg:h-[560px]">
+
+                <!-- Organic background shape -->
+                <div class="absolute left-[7%] top-[8%] h-[78%] w-[70%] rounded-[42%_58%_55%_45%/48%_42%_58%_52%] bg-[#eef0df]"></div>
+
+                <!-- Main portrait -->
+                <div class="absolute left-[5%] top-[4%] z-10 h-[365px] w-[68%] overflow-hidden rounded-[30px] border-[7px] border-white bg-[#e8e5da] shadow-[0_22px_55px_rgba(45,63,45,0.15)] sm:h-[420px] sm:w-[69%] lg:h-[490px] lg:w-[69%]">
+                    <img
+                        src="./assets/2c824b85-25ae-4f49-a347-5d14f7a574a3.png"
+                        alt="Manisha Yadav - Blessing Welfare Society"
+                        class="h-full w-full object-cover  transition duration-700 hover:scale-[1.03]"
+                    />
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#263d2b]/10 via-transparent to-white/10"></div>
+                </div>
+
+                <!-- Community photograph -->
+                <div class="absolute bottom-[2%] right-[0%] z-20 h-[145px] w-[62%] overflow-hidden rounded-[24px] border-[7px] border-white bg-[#e8e5da] shadow-[0_18px_45px_rgba(45,63,45,0.17)] sm:h-[175px] sm:w-[57%] lg:h-[205px] lg:w-[55%]">
+                    <img
+                        src="./assets/WhatsApp Image 2026-09-23 at 1.08.07 PM.jpeg"
+                        alt="Blessing Welfare Society community programme"
+                        class="h-full w-full object-fit transition duration-700 hover:scale-[1.04]"
+                    />
+                </div>
+
+                <!-- Small trust badge -->
+                <div class="absolute bottom-[7%] left-[2%] z-30 hidden items-center gap-2 rounded-full border border-white/80 bg-white/95 px-4 py-2.5 text-xs font-medium text-[#50684d] shadow-lg sm:flex">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#eef0df] text-[#50684d]">
+                        <i class="fa-solid fa-heart text-[11px]"></i>
+                    </span>
+                    <span>Serving with purpose</span>
+                </div>
+
+                <!-- Decorative botanical strokes -->
+                <div class="absolute right-[4%] top-[2%] hidden text-[#71846a] sm:block">
+                    <i class="fa-solid fa-leaf rotate-[-25deg] text-4xl opacity-70"></i>
+                </div>
+                <div class="absolute bottom-[24%] left-[-1%] hidden text-[#71846a] sm:block">
+                    <i class="fa-solid fa-leaf rotate-[35deg] text-3xl opacity-60"></i>
+                </div>
+
+            </div>
+
+
+            <!-- ================= CONTENT ================= -->
+            <div class="max-w-2xl text-center lg:text-left">
+
+                <!-- Section label -->
+                <div class="mb-5 flex items-center justify-center gap-3 text-[11px] font-semibold tracking-[3px] text-[#62765b] sm:text-xs lg:justify-start">
+                    <span class="h-px w-8 bg-[#b99a55]"></span>
+                    ABOUT US
+                    <span class="h-px w-8 bg-[#b99a55]"></span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-[39px] font-semibold leading-[1.08] tracking-[-0.02em] text-[#172b2a] sm:text-5xl lg:text-[58px]">
+                    Building a
+                    <br class="hidden sm:block" />
+                    <span class="font-semibold">Stronger Community</span>
+                </h2>
+
+                <!-- Accent line -->
+                <div class="mx-auto mt-6 h-1 w-16 rounded-full bg-[#c6a55d] lg:mx-0"></div>
+
+                <!-- Subtitle -->
+                <p class="mt-5 text-lg font-medium text-[#42624d] sm:text-xl">
+                    Together for a better tomorrow
+                </p>
+
+                <!-- Description -->
+                <p class="mx-auto mt-5 max-w-xl text-[15px] leading-7 text-[#66716b] sm:text-base sm:leading-8 lg:mx-0">
+                    We are a community-driven initiative focused on creating awareness,
+                    support and opportunities for growth. Through education, guidance and
+                    collective efforts, we aim to make a positive difference in people's lives.
+                </p>
+
+                <!-- Highlights -->
+                <div class="mt-9 grid grid-cols-1 divide-y divide-[#ded9c8] rounded-2xl border border-[#e5e0d1] bg-white/55 sm:mt-10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+
+                    <!-- Community -->
+                    <div class="flex items-center gap-4 px-5 py-5 text-left sm:block sm:px-4 sm:py-6 sm:text-center">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#eef0df] text-[#50684d] sm:mx-auto sm:mb-4">
+                            <i class="fa-solid fa-users text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-[14px] font-semibold leading-5 text-[#172b2a] sm:min-h-[40px]">
+                                Community Focused
+                            </h3>
+                            <p class="mt-1 text-xs leading-5 text-[#78807c]">
+                                For a stronger and united society.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Empowerment -->
+                    <div class="flex items-center gap-4 px-5 py-5 text-left sm:block sm:px-4 sm:py-6 sm:text-center">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f4edd9] text-[#50684d] sm:mx-auto sm:mb-4">
+                            <i class="fa-solid fa-seedling text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-[14px] font-semibold leading-5 text-[#172b2a] sm:min-h-[40px]">
+                                Empowering People
+                            </h3>
+                            <p class="mt-1 text-xs leading-5 text-[#78807c]">
+                                Through knowledge, support and guidance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Impact -->
+                    <div class="flex items-center gap-4 px-5 py-5 text-left sm:block sm:px-4 sm:py-6 sm:text-center">
+                        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#eef0df] text-[#50684d] sm:mx-auto sm:mb-4">
+                            <i class="fa-solid fa-bullseye text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-[14px] font-semibold leading-5 text-[#172b2a] sm:min-h-[40px]">
+                                Creating Lasting Impact
+                            </h3>
+                            <p class="mt-1 text-xs leading-5 text-[#78807c]">
+                                Small steps today, bigger change tomorrow.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom divider -->
+        <div class="relative mx-auto mt-14 flex max-w-5xl items-center gap-4 opacity-70 sm:mt-16">
+            <div class="h-px flex-1 border-t border-dashed border-[#b99a55]"></div>
+            <div class="flex h-9 w-9 items-center justify-center rounded-full bg-[#fbfaf5] sm:h-11 sm:w-11">
+                <div class="h-7 w-7 bg-[#a1772a] sm:h-8 sm:w-8" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+            </div>
+            <div class="h-px flex-1 border-t border-dashed border-[#b99a55]"></div>
+        </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!--        OUR VISION & VALUES SECTION         -->
+    <!-- ========================================== -->
+    <section class="relative z-20 w-full max-w-6xl mx-auto px-6 pt-10 md:pt-16 pb-0">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center fade-up delay-100">
+            
+            <div class="md:col-span-4 flex flex-col justify-center h-full">
+                <h2 class="text-4xl md:text-5xl lg:text-[4rem] text-[#5a6a4c] font-medium leading-tight mb-4 md:mb-0">
+                    Our<br class="hidden md:block">
+                    Vision &<br class="hidden md:block">
+                    Values
+                </h2>
+            </div>
+
+            <div class="md:col-span-8 flex flex-col gap-6 text-[#4a3f2d] font-light text-base md:text-[1.1rem] leading-relaxed">
+                <p>At <strong class="font-semibold"> Blessing Welfare Society</strong>, our mission is to make spirituality simple, practical, and accessible for everyone. We believe in empowering individuals to live a balanced and meaningful life by connecting with their inner selves.</p>
+                
+                <div>
+                    <p class="mb-4">Our guiding values are:</p>
+                    <ul class="flex flex-col gap-4 list-none pl-0">
+                        <li class="flex gap-3">
+                            <span class="text-2xl leading-none mt-[-4px]">&bull;</span>
+                            <div><strong class="font-bold">Authenticity:</strong> We bring real, time-tested spiritual practices that lead to true transformation.</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-2xl leading-none mt-[-4px]">&bull;</span>
+                            <div><strong class="font-bold">Balance:</strong> We focus on harmonizing the mind, body, and spirit to help you achieve inner peace.</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-2xl leading-none mt-[-4px]">&bull;</span>
+                            <div><strong class="font-bold">Compassion:</strong> We nurture a supportive and inclusive community where everyone feels valued and understood.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <p>By integrating ancient wisdom into modern living, we inspire self-discovery, healing, and purposeful living. At <strong class="font-semibold">Blessing Welfare Society</strong>, we're here to guide you toward a life of clarity, joy, and inner alignment.</p>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center w-full max-w-4xl lg:max-w-6xl mx-auto mt-8 md:mt-10 mb-8 md:mb-10 opacity-80 fade-up delay-200">
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+            <div class="px-4">
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-[#A1772A]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+            </div>
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--           ABOUT FOUNDER SECTION            -->
+    <!-- ========================================== -->
+    <section class="relative z-20 w-full max-w-7xl mx-auto px-2 md:px-4 pt-0 pb-0">
+        <div class="flex flex-col md:flex-row w-full bg-[#9A7228] shadow-lg fade-up delay-100">
+            
+            <div class="w-full md:w-[55%] p-10 md:p-14 lg:p-16 flex flex-col items-center justify-center text-center text-white">
+                <h3 class="text-xl md:text-2xl font-light tracking-wide uppercase mb-3">About Founder</h3>
+                
+                <h2 class="text-3xl md:text-[2.5rem] text-[#F8E6C2] font-medium mb-10 md:mb-14">Manisha Yadav</h2>
+
+                <div class="flex flex-row justify-center items-start gap-4 md:gap-8 w-full mb-10">
+                    <div class="flex flex-col items-center flex-1">
+                        <span class="text-xl md:text-2xl font-semibold mb-1">10+</span>
+                        <span class="text-[0.65rem] md:text-xs uppercase tracking-wider font-light text-center">Years of Experience</span>
+                    </div>
+                    <div class="h-10 md:h-12 border-l-[1.5px] border-white/40 mt-1"></div>
+                    <div class="flex flex-col items-center flex-1">
+                        <span class="text-xl md:text-2xl font-semibold mb-1">100+</span>
+                        <span class="text-[0.65rem] md:text-xs uppercase tracking-wider font-light text-center">Workshop Taken</span>
+                    </div>
+                    <div class="h-10 md:h-12 border-l-[1.5px] border-white/40 mt-1"></div>
+                    <div class="flex flex-col items-center flex-1">
+                        <span class="text-xl md:text-2xl font-semibold mb-1">10,000+</span>
+                        <span class="text-[0.65rem] md:text-xs uppercase tracking-wider font-light text-center">People Healed</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-5 mb-10">
+                    <a href="https://www.facebook.com/share/1LoTT9etfn/" target="_blank" class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition">
+                        <i class="fa-brands fa-facebook-f text-sm"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition">
+                        <i class="fa-brands fa-linkedin-in text-sm"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mission_lakshya_manisha_yadav?stkn=MWh0a2tjczdzNDMwYw==" target="_blank" class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition">
+                        <i class="fa-brands fa-instagram text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-[45%] min-h-[350px] p-6 sm:p-10 md:p-12 lg:p-14 flex items-center justify-center bg-[#8f6923]">
+                <!-- Electric Profile Container -->
+                <div class="relative w-full max-w-[380px] aspect-[3/4] max-h-[500px]">
+                    <!-- Background Glow Layer -->
+                    <div class="absolute inset-0 bg-[#dd8448] rounded-2xl blur-[28px] opacity-40 z-0"></div>
+
+                    <!-- Electric Border Effects (Layers) Hardware Accelerated -->
+                    <div class="absolute inset-0 pointer-events-none z-20">
+                        <div class="w-full h-full relative">
+                            <div class="absolute -inset-[3px] border-[2px] border-[#dd8448] rounded-2xl transform-gpu will-change-[filter]" style="filter: url(#turbulent-displace);"></div>
+                        </div>
+                        <div class="absolute inset-0 border border-[#dd8448]/50 rounded-2xl"></div>
+                        <div class="absolute inset-0 border-2 border-[#dd8448]/60 rounded-2xl blur-[2px]"></div>
+                        <div class="absolute inset-0 border-[3px] border-[#dd8448] rounded-2xl blur-[6px] opacity-70"></div>
+                    </div>
+
+                    <!-- Image Content -->
+                    <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl z-10 group bg-gray-200">
+                        <img src="./assets/WhatsApp Image 2026-09-23 at 1.11.45 PM.jpeg" alt="Manisha Yadav - Founder" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 pointer-events-none shadow-[inset_0_0_20px_rgba(221,132,72,0.3)]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center w-full max-w-4xl lg:max-w-6xl mx-auto mt-6 md:mt-8 mb-16 md:mb-20 opacity-80 fade-up delay-200">
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+            <div class="px-4">
+                <div class="w-10 h-10 md:w-16 md:h-16 bg-[#A1772A]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+            </div>
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--           ABOUT ME / FOUNDER DETAILS       -->
+    <!-- ========================================== -->
+    <section class="relative w-full bg-[#F8E6C2]">
+        <div class="relative w-full max-w-7xl mx-auto pb-10 px-5 z-10 fade-up">
+            
+            <div class="relative mb-12 md:mb-16">
+                <div class="absolute top-0 right-10 opacity-20 pointer-events-none hidden md:block w-64">
+                    <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" class="stroke-[#A1772A] fill-none" stroke-width="3" stroke-linecap="round">
+                        <path d="M0,20 C25,5 50,35 75,20 C100,5 125,35 150,20 C175,5 200,35 225,20" />
+                        <path d="M0,35 C25,20 50,50 75,35 C100,20 125,50 150,35 C175,20 200,50 225,35" />
+                        <path d="M0,35 C25,20 50,50 75,35 C100,20 125,50 150,35 C175,20 200,50 225,35" />
+                    </svg>
+                </div>
+
+                <h2 class="text-5xl md:text-[4rem] font-light text-[#2d281e] mb-6 tracking-wide">About Me.</h2>
+                <p class="text-[0.95rem] md:text-lg text-[#4a3f2d] font-light leading-relaxed max-w-4xl relative z-10">
+                    Manisha Yadav is the <span class="font-medium text-[#2d281e]">founder</span> of <span class="font-medium text-[#2d281e]">Blessing Welfare Society</span>. She is a <span class="font-medium text-[#2d281e]">meditation maven</span> and <span class="font-medium text-[#2d281e]">spiritual mentor</span> who helps people find peace, clarity, and purpose through <span class="font-medium text-[#2d281e]">ancient wisdom</span> and <span class="font-medium text-[#2d281e]">modern practices</span> from past <span class="font-medium text-[#2d281e]">10 Years</span>.
+                </p>
+            </div>
+
+            <div class="bg-[#a38035] p-8 md:p-12 lg:p-16 shadow-xl border border-[#3b3528]/10 slide-in-right delay-200">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wider uppercase">
+                    Manisha Yadav
+                </h3>
+                
+                <p class="text-white font-light text-base md:text-[1.1rem] leading-relaxed mb-6">
+                    Her journey started with her own search for inner peace. Facing life's struggles, Manisha discovered meditation as a powerful tool for healing and transformation. This experience inspired her to share this knowledge with others.
+                </p>
+
+                <p class="text-white font-light text-base md:text-[1.1rem] leading-relaxed mb-4">
+                    Blessing Welfare Society, her platform, is built on three core values:
+                </p>
+
+                <ul class="list-disc pl-6 md:pl-8 space-y-2 text-white font-light text-base md:text-[1.1rem] leading-relaxed mb-8">
+                    <li><span class="font-semibold tracking-wide">Authenticity:</span> Sharing genuine, time-tested practices.</li>
+                    <li><span class="font-semibold tracking-wide">Simplicity:</span> Making ancient teachings easy to understand.</li>
+                    <li><span class="font-semibold tracking-wide">Transformation:</span> Helping people unlock their full potential.</li>
+                </ul>
+
+                <p class="text-white font-light text-base md:text-[1.1rem] leading-relaxed">
+                    At Blessing Welfare Society, Manisha blends ancient teachings with practical tools for today's fast-paced world. Her relatable and easy-to-follow methods have inspired many to embrace a life of mindfulness and spiritual growth.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--               9. FOOTER SECTION            -->
+    <!-- ========================================== -->
+    <footer class="bg-[#5a6a4c] text-[#e8daba] py-16 px-6 lg:px-16 overflow-hidden mt-0 border-t border-[#e8daba]/10 relative z-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
+                <div class="lg:col-span-5 flex flex-col gap-8 w-full mx-auto md:max-w-md lg:max-w-full lg:mx-0 slide-in-left delay-100">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="relative border-b border-[#e8daba]/50 pb-2 flex justify-between items-center w-full">
+                        <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                        <input type="hidden" name="subject" value="New Newsletter Subscriber!">
+                        <input type="email" name="Newsletter Email" placeholder="Enter Your Email" required class="bg-transparent border-none outline-none text-sm text-[#e8daba] placeholder-[#e8daba]/70 w-full pr-4">
+                        <button type="submit" class="text-xl hover:text-white transition-colors cursor-pointer shrink-0">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </form>
+                    <div class="w-full h-48 sm:h-56 bg-gray-300 rounded overflow-hidden border-2 border-[#e8daba]/20">
+                        <iframe src="https://maps.google.com/maps?q=Chhindwara,%20Madhya%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center sm:text-left text-sm md:text-base slide-in-right delay-200">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Menu</h3>
+                        <a href="index.html" class="hover:text-white transition-colors font-light">Home</a>
+                        <a href="contact.html" class="hover:text-white transition-colors font-light">Contact Us</a>
+                        <a href="blog.html" class="hover:text-white transition-colors font-light">Blogs</a>
+                        <a href="terms.html" class="hover:text-white transition-colors font-light">Terms & Policies</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Contact</h3>
+                        <p class="font-light">Tel: +91 8319440047</p>
+                        <p class="font-light break-all">Email: blessingshubwelfaresociety@gmail.com</p>
+                        <div class="font-light mt-1">
+                            <p>DIVINE SPACE, Khajri Road, Chhindwara, MP</p>
+                            <p>480001</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Socials</h3>
+                        <a href="https://www.facebook.com/share/1LoTT9etfn/" target="_blank" class="hover:text-white transition-colors font-light">Facebook</a>
+                        <a href="https://www.linkedin.com" target="_blank" class="hover:text-white transition-colors font-light">LinkedIn</a>
+                        <a href="https://www.instagram.com/mission_lakshya_manisha_yadav?stkn=MWh0a2tjczdzNDMwYw==" target="_blank" class="hover:text-white transition-colors font-light">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center pt-8 border-t border-[#e8daba]/20 gap-4 text-center fade-up delay-300">
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-[#e2bc68]">
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-[#e2bc68]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+                    <div class="leading-none text-center sm:text-left mt-2 sm:mt-0">
+                        <span class="cursive-font text-2xl md:text-4xl">Blessing Welfare Society</span>
+                    </div>
+                </div>
+                <p class="text-xs md:text-sm font-light mt-2 max-w-md mx-auto">Copyright 2026 © Tushar Pawar || 9630947125. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APPOINTMENT BOOKING MODAL -->
+    <div id="appointmentModal" class="fixed inset-0 bg-black/70 z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
+        <div class="bg-[#F6E5C9] w-full max-w-lg rounded-xl shadow-2xl overflow-visible relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-[#5a6a4c] hover:text-black text-2xl z-10 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="p-5 sm:p-8">
+                <h2 class="text-3xl font-semibold text-[#5a6a4c] mb-1 text-center font-serif">Book Appointment</h2>
+                <p class="text-center text-[#3d3d3d] mb-6 text-sm">Schedule your session securely.</p>
+
+                <form id="appointmentForm" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="appFname" placeholder="First Name" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                        <input type="text" id="appLname" placeholder="Last Name" class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    </div>
+
+                    <input type="email" id="appEmail" placeholder="Email Address" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    
+                    <div class="w-full">
+                        <input type="tel" id="appPhone" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded" placeholder="Phone Number">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="date" id="appDate" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                        <input type="time" id="appTime" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                    </div>
+
+                    <select id="appService" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d] cursor-pointer">
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Meditation Class">Meditation Class</option>
+                        <option value="Yoga Session">Yoga Session</option>
+                        <option value="Tarot Reading">Tarot Reading</option>
+                        <option value="Personal Consultation">Personal Consultation</option>
+                    </select>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6 pt-2">
+                        <a href="tel:+918319440047" class="w-full bg-[#5a6a4c] text-[#ECDBB5] font-medium py-3 rounded hover:bg-[#4a583e] transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                        <button type="button" onclick="sendWhatsAppAppointment()" class="w-full bg-[#25D366] text-white font-medium py-3 rounded hover:bg-[#20b858] transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- Image Swap Script -->
+    <script>
+        let isSwapped = false;
+        
+        function swapImages(clickedElement) {
+            const portrait = document.getElementById('portraitImage');
+            const group = document.getElementById('groupImage');
+            const badge = document.getElementById('trustBadge');
+
+            if (clickedElement === 'group' && !isSwapped) {
+                // Animate Group Image to Main Position
+                group.className = "absolute left-[5%] top-[4%] z-30 h-[365px] w-[68%] cursor-pointer overflow-hidden rounded-[30px] border-[7px] border-white bg-[#e8e5da] shadow-[0_22px_55px_rgba(45,63,45,0.15)] transition-all duration-700 ease-in-out sm:h-[420px] sm:w-[69%] lg:h-[490px] lg:w-[69%] group";
+                
+                // Animate Portrait Image to Small Position
+                portrait.className = "absolute bottom-[2%] right-[0%] z-20 h-[145px] w-[62%] cursor-pointer overflow-hidden rounded-[24px] border-[7px] border-white bg-[#e8e5da] shadow-[0_18px_45px_rgba(45,63,45,0.17)] transition-all duration-700 ease-in-out sm:h-[175px] sm:w-[57%] lg:h-[205px] lg:w-[55%] group";
+                
+                // Hide badge temporarily for clean swap
+                badge.style.opacity = "0";
+                setTimeout(() => badge.style.opacity = "1", 700);
+
+                isSwapped = true;
+            } 
+            else if (clickedElement === 'portrait' && isSwapped) {
+                // Revert Portrait Image to Main Position
+                portrait.className = "absolute left-[5%] top-[4%] z-30 h-[365px] w-[68%] cursor-pointer overflow-hidden rounded-[30px] border-[7px] border-white bg-[#e8e5da] shadow-[0_22px_55px_rgba(45,63,45,0.15)] transition-all duration-700 ease-in-out sm:h-[420px] sm:w-[69%] lg:h-[490px] lg:w-[69%] group";
+                
+                // Revert Group Image to Small Position
+                group.className = "absolute bottom-[2%] right-[0%] z-20 h-[145px] w-[62%] cursor-pointer overflow-hidden rounded-[24px] border-[7px] border-white bg-[#e8e5da] shadow-[0_18px_45px_rgba(45,63,45,0.17)] transition-all duration-700 ease-in-out sm:h-[175px] sm:w-[57%] lg:h-[205px] lg:w-[55%] group";
+                
+                // Hide badge temporarily for clean swap
+                badge.style.opacity = "0";
+                setTimeout(() => badge.style.opacity = "1", 700);
+
+                isSwapped = false;
+            }
+        }
+    </script>
+    <!-- WhatsApp Script -->
+    <script>
+        function sendWhatsAppAppointment() {
+            var fname = document.getElementById('appFname').value;
+            var lname = document.getElementById('appLname').value;
+            var phone = document.getElementById('appPhone').value;
+            var date = document.getElementById('appDate').value;
+            var time = document.getElementById('appTime').value;
+            var service = document.getElementById('appService').value;
+            
+            if(!fname || !phone || !date || !time || !service) {
+                alert("Please fill out all required fields to book an appointment.");
+                return;
+            }
+            
+            var text = "Hello Blessing Welfare Society,\n\n*New Appointment Request*\n\n" +
+                       "*Name:* " + fname + " " + lname + "\n" +
+                       "*Phone:* " + phone + "\n" +
+                       "*Service Requested:* " + service + "\n" +
+                       "*Preferred Date:* " + date + "\n" +
+                       "*Preferred Time:* " + time;
+                       
+            var waLink = "https://wa.me/918319440047?text=" + encodeURIComponent(text);
+            window.open(waLink, "_blank");
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

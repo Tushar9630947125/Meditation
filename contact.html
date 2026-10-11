@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Tathastu Vibes</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- iOS Safari Font Fix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+     <style>
+        body, p, h1, h2, h3, h4, h5, h6, input, button, select, textarea, a, span {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        }
+        .cursive-font, .font-great-vibes {
+            font-family: 'Great Vibes', cursive !important;
+        }
+    </style>
+    <meta name="description" content="Blessing Welfare Society by Manisha Yadav offers spiritual healing, tarot readings, and meditation sessions in Chhindwara, MP to help you find inner peace." />
+    <meta name="keywords" content="Spiritual Healing, Tarot Reading, Meditation, Yoga, Manisha Yadav, Chhindwara, Blessing Welfare Society" />
+</head>
+
+<body class="bg-[#FFFFFF] overflow-x-hidden font-['Poppins']">
+    
+    <!-- ========================================== -->
+    <!--            1. NAVBAR SECTION               -->
+    <!-- ========================================== -->
+    <nav class="bg-[#566e4a] text-white px-4 md:px-8 py-3 flex justify-between items-center w-full sticky top-0 z-[1000] shadow-md font-['Poppins']">
+       <a href="index.html" class="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
+        <!-- SVG Rose Logo (Masking used for exact color match) -->
+        <div class="w-10 h-10 md:w-12 md:h-12 bg-[#f6c358]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+        
+        <div class="flex flex-col">
+            <span class="cursive-font text-2xl md:text-3xl leading-none tracking-wide text-[#f6c358]">Blessing Welfare Society</span>
+            <span class="text-[8px] md:text-[9px] tracking-[0.2em] uppercase text-gray-200 mt-1">People • Purpose • Positive Change</span>
+        </div>
+    </a>
+
+        <ul class="hidden xl:flex items-center gap-7 text-[13px] font-medium tracking-wide">
+            <li><a href="index.html" class="hover:text-[#f6c358] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#f6c358] transition-colors">About Us</a></li>
+            <li><a href="terms.html" class="hover:text-[#f6c358] transition-colors">Terms & Policies</a></li>
+            <li><a href="blog.html" class="hover:text-[#f6c358] transition-colors">Blog</a></li>
+            <li class="border-b-2 border-[#f6c358] pb-1"><a href="contact.html" class="text-[#f6c358] hover:text-[#f6c358] transition-colors">Contact Us</a></li>
+        </ul>
+
+        <div class="hidden lg:flex items-center gap-3">
+            <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-bold hover:bg-[#f6c358] hover:text-[#2b4222] transition-all shadow-md">
+                <i class="fa-solid fa-phone-volume animate-pulse"></i> Call Now
+            </a>
+            <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-1.5 rounded-full flex flex-col items-center justify-center shadow-md hover:bg-[#e3b046] transition-transform hover:scale-105">
+                <span class="font-bold flex gap-2 items-center text-[14px]">
+                    <i class="fa-solid fa-heart text-red-600"></i> Donate
+                </span>
+                <span class="text-[9px] font-medium tracking-wider">Support Us</span>
+            </a>
+            <button id="desktopBookBtn" class="border-[1.5px] border-white/80 px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-medium hover:bg-white hover:text-[#566e4a] transition-all">
+                <i class="fa-regular fa-calendar-check"></i> Book Session
+            </button>
+        </div>
+
+        <button id="openMobileMenu" class="xl:hidden text-[#f6c358] text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-[#566e4a] z-[2000] flex flex-col transform translate-x-full transition-transform duration-500 ease-in-out xl:hidden overflow-y-auto">
+        <button id="closeMobileMenu" class="absolute top-6 right-6 p-2 text-[#f6c358] hover:text-white transition-colors">
+            <i class="fa-solid fa-xmark text-3xl"></i>
+        </button>
+        
+        <div class="mt-20 flex flex-col gap-4 px-6 w-full">
+            <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+                <i class="fa-solid fa-phone-volume"></i> Call Now
+            </a>
+            <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+                <i class="fa-solid fa-heart text-red-600"></i> Donate Now
+            </a>
+            <button id="mobileBookBtn" class="border border-white text-white px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-medium w-full">
+                <i class="fa-regular fa-calendar-check"></i> Book Appointment
+            </button>
+        </div>
+        
+        <nav class="flex flex-col items-center w-full mt-10 gap-6 text-white text-xl font-medium tracking-wide pb-10">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="text-[#f6c358]">Contact Us</a>
+            <a href="terms.html">Terms & Policies</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </div>
+
+    <!-- ========================================== -->
+    <!--          CONTACT US MAIN SECTION           -->
+    <!-- ========================================== -->
+    <section class="relative w-full min-h-screen pt-16 md:pt-24 pb-20 flex flex-col items-center">
+        
+        <!-- DECORATION: Background Roses -->
+        <img src="./assets/downrose(1).svg" alt="Decoration" class="absolute top-10 right-0 w-[150px] md:w-[300px] opacity-[0.15] pointer-events-none transform translate-x-[-20%] -translate-y-[-20%] rotate-[70deg] z-0">        
+        <img src="./assets/rose.svg" alt="Decoration" class="absolute bottom-0 left-0 w-[180px] md:w-[420px] opacity-[0.05] pointer-events-none transform -translate-x-4 translate-y-10 md:translate-y-20 z-0">
+
+        <!-- HEADER -->
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-5 flex flex-col items-center fade-up mt-4 md:mt-0 mb-10 md:mb-16">
+            <h1 class="text-3xl sm:text-4xl md:text-[3.5rem] text-[#1A1A1A] tracking-[0.15em] sm:tracking-[0.20em] mb-6 font-['Playfair_Display'] text-center uppercase">Get In Touch</h1>
+            
+            <!-- Exact Lotus Divider (Top) -->
+            <div class="flex items-center justify-center w-full max-w-[500px] mx-auto mb-6 opacity-80">
+                <div class="h-[1px] flex-grow bg-[#A1772A]"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-[#A1772A] mx-3"></div>
+                <div class="px-2">
+                    <div class="w-12 h-10 bg-[#A1772A]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+                </div>
+                <div class="w-1.5 h-1.5 rounded-full bg-[#A1772A] mx-3"></div>
+                <div class="h-[1px] flex-grow bg-[#A1772A]"></div>
+            </div>
+
+            <p class="text-[#666666] text-sm md:text-base text-center max-w-2xl font-light leading-relaxed">
+                Whether you have a question about our sessions, need spiritual guidance, or want to book an appointment, we are here to help you on your journey.
+            </p>
+        </div>
+
+        <!-- CONTACT CARD CONTAINER (SPLIT DESIGN) -->
+        <div class="relative z-10 w-full max-w-6xl mx-auto px-5 slide-in-up">
+            <div class="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col lg:flex-row border border-[#E5E0D8]">
+                
+                <!-- LEFT PANEL: Info (Olive Green) -->
+                <div class="bg-[#5a6a4c] text-white p-10 md:p-14 lg:w-[40%] flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-[#6c7d5c] rounded-full opacity-50"></div>
+                    <div class="absolute top-10 -left-10 w-32 h-32 bg-[#4a583e] rounded-full opacity-50"></div>
+
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-['Playfair_Display'] mb-2 text-[#F8E6C2]">Contact Information</h3>
+                        <p class="text-white/80 font-light text-sm mb-12">Fill up the form and our team will get back to you directly via WhatsApp.</p>
+
+                        <div class="flex flex-col gap-10">
+                            <!-- Phone -->
+                            <div class="flex items-center gap-5 group cursor-pointer">
+                                <div class="w-12 h-12 rounded-full border border-[#e2bc68]/30 flex items-center justify-center shrink-0 group-hover:bg-[#e2bc68] transition-colors duration-300">
+                                    <i class="fa-solid fa-phone text-[#e2bc68] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div class="font-light text-sm md:text-base">+91 8319440047</div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="flex items-center gap-5 group cursor-pointer">
+                                <div class="w-12 h-12 rounded-full border border-[#e2bc68]/30 flex items-center justify-center shrink-0 group-hover:bg-[#e2bc68] transition-colors duration-300">
+                                    <i class="fa-solid fa-envelope text-[#e2bc68] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div class="font-light text-sm md:text-base break-all">blessingshubwelfaresociety@gmail.com</div>
+                            </div>
+                            
+                            <!-- Location -->
+                            <div class="flex items-start gap-5 group cursor-pointer">
+                                <div class="w-12 h-12 rounded-full border border-[#e2bc68]/30 flex items-center justify-center shrink-0 mt-1 group-hover:bg-[#e2bc68] transition-colors duration-300">
+                                    <i class="fa-solid fa-location-dot text-[#e2bc68] group-hover:text-white transition-colors duration-300"></i>
+                                </div>
+                                <div class="font-light text-sm md:text-base leading-relaxed">
+                                    DIVINE SPACE, Khajri Road,<br> Chhindwara, MP, 480001
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<div class="relative z-10 flex gap-4 mt-16 lg:mt-0">
+                        <a href="https://www.facebook.com/share/1LoTT9etfn/" target="_blank" class="w-10 h-10 rounded-full bg-[#4a583e] flex items-center justify-center hover:bg-[#e2bc68] transition-colors duration-300"><i class="fa-brands fa-facebook-f text-white"></i></a>
+                        <a href="https://www.instagram.com/mission_lakshya_manisha_yadav?stkn=MWh0a2tjczdzNDMwYw==" target="_blank" class="w-10 h-10 rounded-full bg-[#4a583e] flex items-center justify-center hover:bg-[#e2bc68] transition-colors duration-300"><i class="fa-brands fa-instagram text-white"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#4a583e] flex items-center justify-center hover:bg-[#e2bc68] transition-colors duration-300"><i class="fa-brands fa-youtube text-white"></i></a>
+                    </div>
+                </div>
+
+                <!-- RIGHT PANEL: Form (Clean White with WhatsApp Submission) -->
+                <div class="p-10 md:p-14 lg:w-[60%]">
+                    <form id="contactForm" class="flex flex-col gap-8">
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="w-full relative">
+                                <input type="text" required class="w-full bg-transparent border-b border-gray-300 py-3 focus:outline-none focus:border-[#5a6a4c] text-[#1A1A1A] font-light placeholder-transparent peer" id="fname">
+                                <label for="fname" class="absolute left-0 top-3 text-sm text-gray-400 font-light transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#5a6a4c] peer-valid:-top-3.5 peer-valid:text-xs">First Name</label>
+                            </div>
+                            <div class="w-full relative">
+                                <input type="text" class="w-full bg-transparent border-b border-gray-300 py-3 focus:outline-none focus:border-[#5a6a4c] text-[#1A1A1A] font-light placeholder-transparent peer" id="lname">
+                                <label for="lname" class="absolute left-0 top-3 text-sm text-gray-400 font-light transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#5a6a4c] peer-valid:-top-3.5 peer-valid:text-xs">Last Name</label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="w-full relative">
+                                <input type="email" class="w-full bg-transparent border-b border-gray-300 py-3 focus:outline-none focus:border-[#5a6a4c] text-[#1A1A1A] font-light placeholder-transparent peer" id="email">
+                                <label for="email" class="absolute left-0 top-3 text-sm text-gray-400 font-light transition-all peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-[#5a6a4c] peer-valid:-top-3.5 peer-valid:text-xs">Email Address</label>
+                            </div>
+                            <div class="w-full relative pt-[3px]">
+                                <input type="tel" required class="w-full bg-transparent border-b border-gray-300 py-2.5 focus:outline-none focus:border-[#5a6a4c] text-[#1A1A1A] font-light" id="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="w-full relative mt-4">
+                            <textarea rows="4" required class="w-full bg-transparent border-b border-gray-300 py-3 focus:outline-none focus:border-[#5a6a4c] text-[#1A1A1A] font-light placeholder-transparent resize-none peer" id="message"></textarea>
+                            <label for="message" class="absolute left-0 top-3 text-sm text-gray-400 font-light transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#5a6a4c] peer-valid:-top-4 peer-valid:text-xs">Write your message...</label>
+                        </div>
+                        
+                        <div class="mt-6 flex flex-col sm:flex-row items-center gap-6 justify-end">
+                            <button type="button" onclick="sendWhatsAppContact()" class="w-full sm:w-auto bg-[#25D366] text-white font-medium py-3.5 px-10 rounded hover:bg-[#20b858] transition-colors duration-300 flex items-center justify-center gap-3 tracking-wider text-sm uppercase shadow-lg shadow-black/10">
+                                Send via WhatsApp <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exact Lotus Divider (Bottom / Above Map) -->
+        <div class="flex items-center justify-center w-full max-w-[800px] mx-auto mt-20 px-4 opacity-80 fade-up delay-100">
+            <div class="h-[1px] flex-grow bg-[#A1772A]"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-[#A1772A] mx-4"></div>
+            <div class="px-2">
+                <div class="w-14 h-12 bg-[#A1772A]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+            </div>
+            <div class="w-1.5 h-1.5 rounded-full bg-[#A1772A] mx-4"></div>
+            <div class="h-[1px] flex-grow bg-[#A1772A]"></div>
+        </div>
+
+        <!-- GOOGLE MAP -->
+        <div class="relative z-10 w-full max-w-6xl mx-auto px-5 mt-12 fade-up delay-200">
+            <div class="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-[#E5E0D8]">
+                <iframe src="https://maps.google.com/maps?q=Chhindwara,%20Madhya%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!--               FOOTER SECTION               -->
+    <!-- ========================================== -->
+    <footer class="bg-[#5a6a4c] text-[#e8daba] py-16 px-6 lg:px-16 overflow-hidden mt-0 border-t border-[#e8daba]/10 relative z-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
+                <!-- Newsletter & Map -->
+                <div class="lg:col-span-5 flex flex-col gap-8 w-full mx-auto md:max-w-md lg:max-w-full lg:mx-0">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="relative border-b border-[#e8daba]/50 pb-2 flex justify-between items-center w-full">
+                        <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                        <input type="hidden" name="subject" value="New Newsletter Subscriber!">
+                        <input type="email" name="Newsletter Email" placeholder="Enter Your Email" required class="bg-transparent border-none outline-none text-sm text-[#e8daba] placeholder-[#e8daba]/70 w-full pr-4">
+                        <button type="submit" class="text-xl hover:text-white transition-colors cursor-pointer shrink-0">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </form>
+                    <div class="w-full h-48 sm:h-56 bg-gray-300 rounded overflow-hidden border-2 border-[#e8daba]/20">
+                        <iframe src="https://maps.google.com/maps?q=Chhindwara,%20Madhya%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center sm:text-left text-sm md:text-base">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Menu</h3>
+                        <a href="index.html" class="hover:text-white transition-colors font-light">Home</a>
+                        <a href="contact.html" class="hover:text-white transition-colors font-light">Contact Us</a>
+                        <a href="blog.html" class="hover:text-white transition-colors font-light">Blogs</a>
+                        <a href="terms.html" class="hover:text-white transition-colors font-light">Terms & Policies</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Contact</h3>
+                        <p class="font-light">Tel: +91 8319440047</p>
+                        <p class="font-light break-all">Email: blessingshubwelfaresociety@gmail.com</p>
+                        <div class="font-light mt-1">
+                            <p>DIVINE SPACE, Khajri Road, Chhindwara, MP</p>
+                            <p>480001</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Socials</h3>
+                        <a href="#" class="hover:text-white transition-colors font-light">Facebook</a>
+                        <a href="#" class="hover:text-white transition-colors font-light">LinkedIn</a>
+                        <a href="#" class="hover:text-white transition-colors font-light">Youtube</a>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="flex flex-col items-center justify-center pt-8 border-t border-[#e8daba]/20 gap-4 text-center fade-up delay-300">
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-[#e2bc68]">
+                    <!-- SVG Rose Logo replacing fa-om -->
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-[#e2bc68]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+                    <div class="leading-none text-center sm:text-left mt-2 sm:mt-0">
+                        <span class="cursive-font text-2xl md:text-4xl">Blessing Welfare Society</span>
+                    </div>
+                </div>
+                <p class="text-xs md:text-sm font-light mt-2 max-w-md mx-auto">Copyright 2026 © Tushar Pawar || 9630947125. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!--        APPOINTMENT BOOKING MODAL           -->
+    <!-- ========================================== -->
+    <div id="appointmentModal" class="fixed inset-0 bg-black/70 z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
+        <div class="bg-[#F6E5C9] w-full max-w-lg rounded-xl shadow-2xl overflow-visible relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-[#5a6a4c] hover:text-black text-2xl z-10 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="p-5 sm:p-8">
+                <h2 class="text-3xl font-semibold text-[#5a6a4c] mb-1 text-center">Book Appointment</h2>
+                <p class="text-center text-[#3d3d3d] mb-6 text-sm">Schedule your session securely.</p>
+
+                <form id="appointmentForm" class="space-y-4">
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="appFname" placeholder="First Name" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                        <input type="text" id="appLname" placeholder="Last Name" class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    </div>
+
+                    <input type="email" id="appEmail" placeholder="Email Address" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    
+                    <div class="w-full">
+                        <input type="tel" id="appPhone" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded" placeholder="Phone Number">
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="date" id="appDate" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                        <input type="time" id="appTime" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                    </div>
+
+                    <select id="appService" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d] cursor-pointer">
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Meditation Class">Meditation Class</option>
+                        <option value="Yoga Session">Yoga Session</option>
+                        <option value="Tarot Reading">Tarot Reading</option>
+                        <option value="Personal Consultation">Personal Consultation</option>
+                    </select>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6 pt-2">
+                        <!-- Direct Call Button -->
+                        <a href="tel:+918319440047" class="w-full bg-[#5a6a4c] text-[#ECDBB5] font-medium py-3 rounded hover:bg-[#4a583e] transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                        <!-- WhatsApp Booking Button -->
+                        <button type="button" onclick="sendWhatsAppAppointment()" class="w-full bg-[#25D366] text-white font-medium py-3 rounded hover:bg-[#20b858] transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Book via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT IMPORTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
+    <!-- WHATSAPP SUBMISSION LOGIC -->
+    <script>
+        // For Contact Us Page Form
+        function sendWhatsAppContact() {
+            var fname = document.getElementById('fname').value;
+            var lname = document.getElementById('lname').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
+            
+            if(!fname || !phone || !message) {
+                alert("Please fill out your Name, Phone Number, and Message.");
+                return;
+            }
+            
+            var text = "Hello Blessing Welfare Society,\n\n*New Contact Inquiry*\n\n" +
+                       "*Name:* " + fname + " " + lname + "\n" +
+                       "*Email:* " + (email ? email : "N/A") + "\n" +
+                       "*Phone:* " + phone + "\n\n" +
+                       "*Message:* \n" + message;
+                       
+            var waLink = "https://wa.me/918319440047?text=" + encodeURIComponent(text);
+            window.open(waLink, "_blank");
+        }
+
+        // For Appointment Booking Modal
+        function sendWhatsAppAppointment() {
+            var fname = document.getElementById('appFname').value;
+            var lname = document.getElementById('appLname').value;
+            var phone = document.getElementById('appPhone').value;
+            var date = document.getElementById('appDate').value;
+            var time = document.getElementById('appTime').value;
+            var service = document.getElementById('appService').value;
+            
+            if(!fname || !phone || !date || !time || !service) {
+                alert("Please fill out all required fields to book an appointment.");
+                return;
+            }
+            
+            var text = "Hello Blessing Welfare Society,\n\n*New Appointment Request*\n\n" +
+                       "*Name:* " + fname + " " + lname + "\n" +
+                       "*Phone:* " + phone + "\n" +
+                       "*Service Requested:* " + service + "\n" +
+                       "*Preferred Date:* " + date + "\n" +
+                       "*Preferred Time:* " + time;
+                       
+            var waLink = "https://wa.me/918319440047?text=" + encodeURIComponent(text);
+            window.open(waLink, "_blank");
+        }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

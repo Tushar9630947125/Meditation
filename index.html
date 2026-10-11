@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blessing Welfare Society</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- iOS Safari Font Fix -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    
+    <style>
+        /* ========================================= */
+        /* GLOBAL FONT ENFORCEMENT & RESET           */
+        /* ========================================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, p, h1, h2, h3, h4, h5, h6, input, button, select, textarea, a, span { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important; }
+        .cursive-font, .subtitle, .logo-text, .font-great-vibes, .quote-icon { font-family: 'Great Vibes', cursive !important; }
+        body { overflow-x: hidden; background-color: #fdfaf7; }
+
+        /* Hover Animation for How We Change Lives Icons */
+        .mask-icon-container { transition: all 0.4s ease; }
+        .group:hover .mask-icon-container {
+            transform: scale(1.15) translateY(-5px);
+            background-color: #5a6a4c !important; 
+        }
+
+        /* ========================================= */
+        /* HERO SECTION SPECIFICS                    */
+        /* ========================================= */
+        .hero-bg {
+            background-image: url('./assets/e2f74209-411b-49c7-9e1a-cbeab0651538.jpg');
+            background-size: cover;
+            background-position: center right; 
+            background-repeat: no-repeat;
+        }
+        
+        .hero-gradient { background: linear-gradient(90deg, rgb(249, 233, 203) 0%, rgb(249, 238, 215) 40%, rgba(249, 238, 215, 0) 50%); }
+
+        /* =========================================================
+           TABLET RESPONSIVE
+        ========================================================= */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .hero-bg { min-height: auto !important; height: auto !important; background-position: 76% center !important; background-size: cover !important; }
+            .hero-gradient { background: linear-gradient(90deg, rgba(249,233,203,1) 0%, rgba(249,238,215,.98) 38%, rgba(249,238,215,.82) 53%, rgba(249,238,215,.25) 70%, rgba(249,238,215,0) 100%) !important; }
+            .hero-bg > .relative.z-10.flex-1 { max-width: 1100px !important; display: grid !important; grid-template-columns: minmax(0, 1fr) 330px !important; align-items: start !important; column-gap: 22px !important; padding-top: 38px !important; padding-bottom: 25px !important; padding-left: 28px !important; padding-right: 24px !important; width: 100% !important; }
+            .mission-left-content { width: 100% !important; align-items: flex-start !important; text-align: left !important; margin-top: 0 !important; justify-content: flex-start !important; }
+            .mission-left-content > h3 { font-size: 2.7rem !important; line-height: .95 !important; margin-bottom: 5px !important; }
+            .mission-left-content h1 { font-size: clamp(3rem, 6vw, 4.8rem) !important; line-height: .92 !important; letter-spacing: -.045em !important; white-space: nowrap !important; }
+            .mission-left-content > p { justify-content: flex-start !important; text-align: left !important; font-size: 10px !important; line-height: 1.5 !important; letter-spacing: .11em !important; margin-top: 7px !important; margin-bottom: 15px !important; max-width: 650px !important; }
+            .mission-ribbon { width: auto !important; max-width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 22px !important; padding: 10px 20px !important; }
+            .mission-ribbon span { font-size: 13px !important; line-height: 1.3 !important; white-space: nowrap !important; }
+            .mission-left-content .grid { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; width: 100% !important; max-width: 650px !important; gap: 10px !important; margin: 0 0 24px 0 !important; }
+            .mission-left-content .grid > div { min-width: 0 !important; }
+            .mission-left-content .grid > div > div { width: 58px !important; height: 58px !important; font-size: 19px !important; margin-bottom: 7px !important; }
+            .mission-left-content .grid h4 { font-size: 11px !important; line-height: 1.15 !important; margin-bottom: 3px !important; }
+            .mission-left-content .grid p { font-size: 8.5px !important; line-height: 1.35 !important; }
+            .mission-left-content > .mb-8 { width: 100% !important; margin: 0 0 20px 0 !important; text-align: left !important; }
+            .mission-left-content > .mb-8 h3 { font-size: 2.65rem !important; line-height: .95 !important; margin-bottom: 5px !important; }
+            .mission-left-content > .mb-8 p { font-size: 11px !important; line-height: 1.4 !important; }
+            .hero-secondary-ctas { display: flex !important; flex-direction: row !important; gap: 10px !important; width: auto !important; margin: 0 !important; }
+            .hero-secondary-ctas button { padding: 10px 16px !important; min-width: 190px !important; gap: 10px !important; }
+            .hero-secondary-ctas button span:first-child { font-size: 13px !important; }
+            .hero-secondary-ctas button span:last-child { font-size: 8px !important; }
+            .mobile-pro-spacer { display: none !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child { width: 100% !important; margin: 0 !important; align-items: flex-start !important; justify-content: flex-start !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] { width: 100% !important; max-width: 330px !important; margin: 0 !important; padding: 22px 20px !important; border-radius: 22px !important; box-shadow: 0 12px 35px rgba(0,0,0,.16) !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child h2 { font-size: 21px !important; line-height: 1.05 !important; margin-bottom: 10px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] > p { font-size: 10.5px !important; line-height: 1.45 !important; margin-bottom: 14px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child ul { margin-bottom: 17px !important; gap: 9px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child li { font-size: 10.5px !important; gap: 9px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child li > div { width: 27px !important; height: 27px !important; flex-shrink: 0 !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a.bg-\[\#f6c358\] { min-height: 56px !important; padding: 9px 15px !important; margin-bottom: 14px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a.bg-\[\#f6c358\] span { font-size: 12px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a[href*="wa.me"] { gap: 10px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a[href*="wa.me"] > div:first-child { width: 38px !important; height: 38px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a[href*="wa.me"] span:last-child { font-size: 15px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] > p:last-child { margin-top: 12px !important; font-size: 9px !important; }
+            .hero-bg > .w-full.bg-\[\#394a2e\] { margin-top: 0 !important; padding: 9px 20px !important; min-height: 36px !important; }
+            .hero-bg > .w-full.bg-\[\#394a2e\] > div:first-child { font-size: 8px !important; gap: 10px !important; }
+        }
+
+        @media (min-width: 768px) and (max-width: 850px) {
+            .hero-bg > .relative.z-10.flex-1 { grid-template-columns: minmax(0, 1fr) 285px !important; column-gap: 15px !important; padding-left: 22px !important; padding-right: 18px !important; padding-top: 30px !important; }
+            .mission-left-content > h3 { font-size: 2.25rem !important; }
+            .mission-left-content h1 { font-size: 3.25rem !important; }
+            .mission-left-content > p { font-size: 8.5px !important; letter-spacing: .08em !important; }
+            .mission-ribbon { padding: 8px 14px !important; }
+            .mission-ribbon span { font-size: 11px !important; }
+            .mission-left-content .grid { max-width: 560px !important; gap: 5px !important; }
+            .mission-left-content .grid > div > div { width: 50px !important; height: 50px !important; font-size: 16px !important; }
+            .mission-left-content .grid h4 { font-size: 9.5px !important; }
+            .mission-left-content .grid p { font-size: 7.5px !important; }
+            .mission-left-content > .mb-8 h3 { font-size: 2.15rem !important; }
+            .mission-left-content > .mb-8 p { font-size: 9px !important; }
+            .hero-secondary-ctas button { min-width: 155px !important; padding: 8px 12px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] { max-width: 285px !important; padding: 18px 15px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child h2 { font-size: 18px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] > p { font-size: 9px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child li { font-size: 9px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a.bg-\[\#f6c358\] { padding-left: 12px !important; padding-right: 12px !important; }
+        }
+
+        /* =========================================================
+           MOBILE RESPONSIVE (RESTORED FIX)
+        ========================================================= */
+        @media (max-width: 767px) {
+            .hero-bg { background-image: none !important; background-color: #fdf9f1; min-height: auto !important; }
+            .hero-gradient { display: none !important; }
+            .hero-bg > .relative.z-10.flex-1 { padding-left: 18px !important; padding-right: 18px !important; padding-top: 22px !important; padding-bottom: 18px !important; gap: 0 !important; align-items: stretch !important; }
+            .mission-left-content { width: 100% !important; margin-top: 0 !important; align-items: center !important; text-align: center !important; }
+            .mission-left-content > h3 { font-size: 2.15rem !important; line-height: 1 !important; margin-bottom: 5px !important; }
+            .mission-left-content h1 { font-size: clamp(2.35rem, 10.5vw, 3.15rem) !important; line-height: .95 !important; letter-spacing: -.045em !important; white-space: nowrap; }
+            .mission-left-content > p { width: 100% !important; justify-content: center !important; text-align: center !important; font-size: 9px !important; line-height: 1.65 !important; letter-spacing: .09em !important; margin-bottom: 14px !important; }
+            .mission-ribbon { width: 100% !important; max-width: 420px !important; margin-left: 0 !important; margin-right: 0 !important; margin-bottom: 0 !important; padding: 12px 16px !important; text-align: left !important; }
+            .mission-ribbon span { font-size: 13px !important; line-height: 1.45 !important; }
+            
+            /* RESTORED: This makes the image show up properly on mobile! */
+            .mobile-hero-image { display: block !important; width: calc(100% + 30px) !important; height: 285px !important; margin: 0 -18px 28px !important; overflow: hidden; border-radius: 5%; box-shadow: 0 8px 24px rgba(30, 51, 33, .10); }
+            .mobile-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 64% center; display: block; }
+            .mobile-pro-spacer { display: none !important; }
+            
+            .mission-left-content .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; width: 100% !important; max-width: 430px !important; gap: 26px 12px !important; margin: 0 auto 30px !important; }
+            .mission-left-content .grid > div > div { width: 58px !important; height: 58px !important; font-size: 18px !important; margin-bottom: 8px !important; }
+            .mission-left-content .grid h4 { font-size: 12px !important; line-height: 1.18 !important; margin-bottom: 3px !important; }
+            .mission-left-content .grid p { font-size: 9.5px !important; line-height: 1.45 !important; }
+            .mission-left-content > .mb-8 { width: 100% !important; margin-bottom: 28px !important; text-align: center !important; }
+            .mission-left-content > .mb-8 h3 { font-size: 2.45rem !important; line-height: 1 !important; margin-bottom: 7px !important; }
+            .mission-left-content > .mb-8 p { font-size: 11px !important; line-height: 1.45 !important; }
+            .hero-secondary-ctas { display: none !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child { width: 100% !important; margin: 0 !important; align-items: stretch !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child > .bg-\[\#fdfbf5\] { width: 100% !important; max-width: 100% !important; margin: 0 auto 6px !important; padding: 22px 18px !important; border-radius: 26px !important; box-shadow: 0 8px 28px rgba(0,0,0,.08) !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child h2 { font-size: 20px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child p { font-size: 11px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a.bg-\[\#f6c358\] { min-height: 64px; padding: 12px 18px !important; }
+            .hero-bg > .relative.z-10.flex-1 > div:last-child a[href*="wa.me"] { gap: 12px !important; }
+            .hero-bg > .w-full.bg-\[\#394a2e\] { margin-top: 0 !important; padding: 10px 14px !important; }
+        }
+
+        @media (max-width: 390px) {
+            .mission-left-content h1 { font-size: 2.2rem !important; }
+            .mission-left-content > h3 { font-size: 1.95rem !important; }
+            .mobile-hero-image { height: 250px !important; object-position: 62% center; }
+            .mission-left-content > .mb-8 h3 { font-size: 2.15rem !important; }
+        }
+
+        /* Miscellaneous */
+        .cycle-section { position: relative; padding: 80px 5%; min-height: 80vh; display: flex; align-items: center; overflow: hidden; }
+        .bg-half { position: absolute; top: 0; bottom: 0; width: 50%; z-index: 0; transition: background-color 0.8s ease-in-out; }
+        .left-half { left: 0; background-color: #ECDBB5; }
+        .right-half { right: 0; background-color: #fdfaf2; }
+        .cycle-section.is-visible .left-half, .cycle-section.is-visible .right-half { background-color: #fdfaf2; }
+        .holistic-section { position: relative; overflow: hidden; padding: clamp(80px, 9vw, 12px) 20px clamp(85px, 9vw, 12px); background: #F6E5C9; }
+        .holistic-inner { position: relative; z-index: 2; width: min(1180px, 100%); margin: auto; }
+        .section-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(1px); }
+        .orb-one { width: 300px; height: 300px; left: -170px; top: 30%; background: rgba(90,106,76,.07); }
+        .orb-two { width: 260px; height: 260px; right: -150px; bottom: 8%; background: rgba(215,166,75,.08); }
+        .fade-up, .fade-in { opacity: 0; transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-up { transform: translateY(50px); }
+        .is-visible { opacity: 1 !important; transform: translate(0) scale(1) !important; }
+        .iti--container { z-index: 999999 !important; }
+    </style>
+    <meta name="description" content="Blessing Welfare Society by Manisha Yadav offers spiritual healing, and meditation sessions in Chhindwara, MP to help you find inner peace." />
+    <meta name="keywords" content="Spiritual Healing, Meditation, Yoga, Manisha Yadav, Chhindwara, Blessing Welfare Society" />
+</head>
+
+<body>
+<!-- Optimized Electric Animation Filter (Smooth Scroll) -->
+<svg style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+  <defs>
+    <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+      <!-- numOctaves reduced to 2 for 5x better performance -->
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise1" seed="1" />
+      <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+        <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise2" seed="1" />
+      <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+        <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise1" seed="2" />
+      <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+        <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="noise2" seed="2" />
+      <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+        <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+      </feOffset>
+
+      <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+      <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+      <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+
+      <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="20" xChannelSelector="R" yChannelSelector="B" />
+    </filter>
+  </defs>
+</svg>
+<nav class="bg-[#566e4a] text-white px-4 md:px-8 py-3 flex justify-between items-center w-full sticky top-0 z-[1000] shadow-md font-['Poppins']">
+  <a href="index.html" class="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity">
+        <!-- SVG Rose Logo (Masking used for exact color match) -->
+        <div class="w-10 h-10 md:w-12 md:h-12 bg-[#f6c358]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+        
+        <div class="flex flex-col">
+            <span class="cursive-font text-2xl md:text-3xl leading-none tracking-wide text-[#f6c358]">Blessing Welfare Society</span>
+            <span class="text-[8px] md:text-[9px] tracking-[0.2em] uppercase text-gray-200 mt-1">People • Purpose • Positive Change</span>
+        </div>
+    </a>
+    <ul class="hidden xl:flex items-center gap-7 text-[13px] font-medium tracking-wide">
+        <li class="border-b-2 border-[#f6c358] pb-1"><a href="index.html" class="hover:text-[#f6c358] transition-colors">Home</a></li>
+        <li><a href="about.html" class="hover:text-[#f6c358] transition-colors">About Us</a></li>
+        <li><a href="terms.html" class="hover:text-[#f6c358] transition-colors">Terms & Policies</a></li>
+        <li><a href="blog.html" class="hover:text-[#f6c358] transition-colors">Blog</a></li>
+        <li><a href="contact.html" class="hover:text-[#f6c358] transition-colors">Contact Us</a></li>
+    </ul>
+
+    <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-bold hover:bg-[#f6c358] hover:text-[#2b4222] transition-all shadow-md">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i> Call Now
+        </a>
+        <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-1.5 rounded-full flex flex-col items-center justify-center shadow-md hover:bg-[#e3b046] transition-transform hover:scale-105">
+            <span class="font-bold flex gap-2 items-center text-[14px]">
+                <i class="fa-solid fa-heart text-red-600"></i> Donate
+            </span>
+            <span class="text-[9px] font-medium tracking-wider">Support Us</span>
+        </a>
+        <button id="desktopBookBtn" class="border-[1.5px] border-white/80 px-4 py-2 rounded-full flex gap-2 items-center text-[13px] font-medium hover:bg-white hover:text-[#566e4a] transition-all">
+            <i class="fa-regular fa-calendar-check"></i> Book Session
+        </button>
+    </div>
+
+    <button id="openMobileMenu" class="xl:hidden text-[#f6c358] text-2xl focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</nav>
+
+<div id="mobileMenuOverlay" class="fixed inset-0 bg-[#566e4a] z-[2000] flex flex-col transform translate-x-full transition-transform duration-500 ease-in-out xl:hidden overflow-y-auto">
+    <button id="closeMobileMenu" class="absolute top-6 right-6 p-2 text-[#f6c358] hover:text-white transition-colors">
+        <i class="fa-solid fa-xmark text-3xl"></i>
+    </button>
+    <div class="mt-20 flex flex-col gap-4 px-6 w-full">
+        <a href="tel:+918319440047" class="bg-white text-[#566e4a] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+            <i class="fa-solid fa-phone-volume"></i> Call Now
+        </a>
+        <a href="donate.html" class="bg-[#f6c358] text-[#2b4222] px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-bold text-lg w-full shadow-md">
+            <i class="fa-solid fa-heart text-red-600"></i> Donate Now
+        </a>
+        <button id="mobileBookBtn" class="border border-white text-white px-5 py-3 rounded-xl flex items-center justify-center gap-2 font-medium w-full">
+            <i class="fa-regular fa-calendar-check"></i> Book Appointment
+        </button>
+    </div>
+    <nav class="flex flex-col items-center w-full mt-10 gap-6 text-white text-xl font-medium tracking-wide">
+        <a href="index.html" class="text-[#f6c358]">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="terms.html">Terms & Policies</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+</div>
+
+<header class="relative w-full min-h-[92vh] hero-bg flex flex-col font-['Poppins'] overflow-hidden">
+    <div class="absolute inset-0 hero-gradient z-0 pointer-events-none"></div>
+    <div class="relative z-10 flex-1 max-w-[1550px] mx-auto w-full flex flex-col lg:flex-row items-center justify-between px-5 sm:px-8 lg:pl-12 lg:pr-4 xl:pr-2 py-10 lg:py-8 gap-4 lg:gap-12">
+        
+        <div class="mission-left-content w-full lg:w-[55%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left mt-4 lg:mt-0">
+            <h3 class="cursive-font text-[2rem] sm:text-[2.5rem] md:text-5xl text-[#2b4222] mb-1">Join Us for</h3>
+            <div class="flex items-center gap-2 mb-2">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold text-[#1e3321] tracking-tighter leading-none uppercase">MISSION LAKSHYA</h1>
+            </div>
+            <p class="text-[#2b4222] text-[10px] sm:text-[11px] md:text-sm font-bold tracking-[0.15em] mb-6 uppercase flex flex-wrap justify-center lg:justify-start gap-2 items-center">
+                Awaken Youth <span class="font-light text-gray-400 hidden sm:inline">|</span> 
+                Transform Society <span class="font-light text-gray-400 hidden sm:inline">|</span> 
+                Build a New Nation
+            </p>
+
+            <div class="brush-ribbon mission-ribbon px-6 sm:px-8 py-2 shadow-sm rounded-sm mb-8 w-max mx-auto lg:mx-0 bg-[#f6c358]/20 border-l-4 border-[#f6c358]">
+                <span class="text-[#2b4222] font-semibold text-[13px] sm:text-sm md:text-base italic">Through Awareness, Meditation & Inner Transformation</span>
+            </div>
+
+            <div class="mobile-hero-image w-full hidden" aria-hidden="true">
+                <img src="./assets/e2f74209-411b-49c7-9e1a-cbeab0651538.jpg" alt="Mission Lakshya Group" class="w-full h-full object-cover"/>
+            </div>
+
+            <!-- Original FontAwesome Icons Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 md:gap-x-6 mb-10 w-full max-w-[400px] md:max-w-[520px] mx-auto lg:mx-0">
+                <div class="flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#ecf2e8] border border-[#a4bea0] flex items-center justify-center text-[#2b4222] text-xl md:text-2xl mb-2 md:mb-3 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d6e3ce]">
+                        <i class="fa-solid fa-person-praying"></i>
+                    </div>
+                    <h4 class="font-bold text-[#1e3321] text-[13px] md:text-sm leading-tight mb-1">Mindful<br>Youth</h4>
+                    <p class="text-[10px] md:text-[11px] text-gray-600 font-medium">Calmer Minds<br>Brighter Futures</p>
+                </div>
+                <div class="flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#ecf2e8] border border-[#a4bea0] flex items-center justify-center text-[#2b4222] text-xl md:text-2xl mb-2 md:mb-3 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d6e3ce]">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="font-bold text-[#1e3321] text-[13px] md:text-sm leading-tight mb-1">Stronger<br>Communities</h4>
+                    <p class="text-[10px] md:text-[11px] text-gray-600 font-medium">Compassionate<br>& Responsible</p>
+                </div>
+                <div class="flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#ecf2e8] border border-[#a4bea0] flex items-center justify-center text-[#2b4222] text-xl md:text-2xl mb-2 md:mb-3 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d6e3ce]">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h4 class="font-bold text-[#1e3321] text-[13px] md:text-sm leading-tight mb-1">Positive<br>Society</h4>
+                    <p class="text-[10px] md:text-[11px] text-gray-600 font-medium">Values, Empathy<br>and Unity</p>
+                </div>
+                <div class="flex flex-col items-center text-center group cursor-pointer">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#ecf2e8] border border-[#a4bea0] flex items-center justify-center text-[#2b4222] text-xl md:text-2xl mb-2 md:mb-3 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#d6e3ce]">
+                        <i class="fa-solid fa-earth-asia"></i>
+                    </div>
+                    <h4 class="font-bold text-[#1e3321] text-[13px] md:text-sm leading-tight mb-1">A Better<br>Tomorrow</h4>
+                    <p class="text-[10px] md:text-[11px] text-gray-600 font-medium">Conscious Youth<br>Stronger India</p>
+                </div>
+            </div>
+
+            <div class="mb-8 w-fit mx-auto lg:mx-0 text-center lg:text-left">
+                <h3 class="cursive-font text-3xl md:text-4xl text-[#2b4222] mb-1">With Manisha Yadav</h3>
+                <p class="text-[#1e3321] text-[13px] md:text-sm font-semibold italic">"Let's create a society where awareness leads to action."</p>
+            </div>
+
+            <div class="hero-secondary-ctas flex flex-col sm:flex-row gap-4 w-full sm:w-max mx-auto lg:mx-0">
+                <button class="bg-[#1e3321] text-white px-8 py-3.5 rounded-full flex items-center justify-center sm:justify-between gap-6 hover:bg-[#325236] transition-colors shadow-lg w-full sm:w-auto">
+                    <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-users text-xl text-[#f6c358]"></i>
+                        <div class="flex flex-col items-start text-left">
+                            <span class="font-bold text-base leading-none">Join Us</span>
+                            <span class="text-[10px] text-gray-300 font-light">Be a part of Mission Lakshya</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </button>
+                <button class="border border-[#1e3321] px-8 py-3.5 rounded-full flex items-center justify-center gap-4 hover:bg-[#1e3321] hover:text-white transition-colors group w-full sm:w-auto">
+                    <i class="fa-regular fa-circle-play text-2xl text-[#1e3321] group-hover:text-white"></i>
+                    <div class="flex flex-col items-start text-left text-[#1e3321] group-hover:text-white">
+                        <span class="font-bold text-sm leading-none">Watch Our Journey</span>
+                        <span class="text-[10px] font-light">Real People. Real Change.</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-pro-spacer w-full h-[280px] sm:h-[350px] lg:hidden block"></div>
+
+       <div class="w-full lg:w-[40%] flex flex-col items-center lg:items-end relative mt-4 lg:mt-0 lg:ml-auto z-20">
+            
+            <!-- Card Wrapper for Electric Routing -->
+            <div class="relative w-full max-w-[320px] mx-auto lg:mr-0 mb-6 lg:mb-0 group">
+                
+                <!-- MOBILE ONLY: Background Glow Layer -->
+                <div class="absolute inset-0 rounded-[2rem] blur-[24px] opacity-40 z-0 bg-gradient-to-tr from-[#dd8448] via-transparent to-[#dd8448] pointer-events-none lg:hidden block"></div>
+
+                <!-- MOBILE ONLY: Electric Border Layers -->
+                <div class="absolute inset-0 z-20 pointer-events-none lg:hidden block">
+                    <div class="absolute inset-0 border-2 border-[#dd8448]/60 rounded-[2rem] blur-[1px]"></div>
+                    <div class="absolute inset-0 border-2 border-[#dd8448] rounded-[2rem] blur-[4px]"></div>
+                    <div class="absolute inset-0 border-2 border-[#dd8448]/50 rounded-[2rem] pr-[3px] pb-[3px]">
+                        <div class="w-full h-full border-2 border-[#dd8448] rounded-[2rem] -mt-[2px] -ml-[2px]" style="filter: url(#turbulent-displace);"></div>
+                    </div>
+                </div>
+
+                <!-- MAIN CARD (Dark on Mobile, Light on Desktop) -->
+                <div class="relative z-10 bg-[#161616] lg:bg-[#fdfbf5] border border-white/10 lg:border-none rounded-[2rem] p-7 md:p-8 shadow-2xl overflow-hidden w-full transition-colors duration-300">
+                    
+                    <!-- Decorative SVGs (Faded on mobile, normal on desktop) -->
+                    <svg class="absolute top-0 right-0 w-24 h-24 md:w-28 md:h-28 opacity-20 lg:opacity-70 pointer-events-none" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 0C100 0 85 5 75 20C65 35 70 55 70 55C70 55 85 45 95 30C105 15 100 0 100 0Z" fill="#d2e3c8"/>
+                        <path d="M100 30C100 30 80 35 65 50C50 65 50 85 50 85C50 85 70 75 85 60C100 45 100 30 100 30Z" fill="#b9d5a8"/>
+                        <path d="M85 0C85 0 65 5 50 20C35 35 30 55 30 55C30 55 50 45 65 30C80 15 85 0 85 0Z" fill="#a4c693"/>
+                    </svg>
+                    <svg class="absolute -bottom-4 -right-4 w-24 h-24 md:w-28 md:h-28 opacity-20 lg:opacity-80 pointer-events-none transform rotate-180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 0C100 0 85 5 75 20C65 35 70 55 70 55C70 55 85 45 95 30C105 15 100 0 100 0Z" fill="#b9d5a8"/>
+                        <path d="M100 30C100 30 80 35 65 50C50 65 50 85 50 85C50 85 70 75 85 60C100 45 100 30 100 30Z" fill="#8cb376"/>
+                    </svg>
+
+                    <!-- Texts & Content dynamically swapping colors -->
+                    <h2 class="text-[20px] md:text-[22px] font-bold text-white lg:text-[#1e3321] leading-tight mb-3 relative z-10">Support<br>Mission Lakshya</h2>
+                    <p class="text-[11px] md:text-[12px] text-gray-400 lg:text-[#334635] leading-relaxed mb-6 font-medium relative z-10">
+                        Your contribution helps us conduct meditation, counselling and awareness programs for youth, women and communities — creating a more mindful, compassionate and empowered society.
+                    </p>
+                    
+                    <ul class="space-y-3.5 md:space-y-4 mb-7 relative z-10">
+                        <li class="flex items-center gap-3 md:gap-4 text-[12px] md:text-[13px] font-semibold text-gray-200 lg:text-[#2b4222]">
+                            <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/5 lg:bg-[#f0e8d5] flex items-center justify-center shrink-0 border border-white/10 lg:border-none"><i class="fa-solid fa-spa text-[#dd8448] lg:text-[#1e3321] text-[11px] md:text-[13px]"></i></div>
+                            Meditation & Awareness
+                        </li>
+                        <li class="flex items-center gap-3 md:gap-4 text-[12px] md:text-[13px] font-semibold text-gray-200 lg:text-[#2b4222]">
+                            <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/5 lg:bg-[#f0e8d5] flex items-center justify-center shrink-0 border border-white/10 lg:border-none"><i class="fa-solid fa-heart text-[#dd8448] lg:text-[#1e3321] text-[11px] md:text-[13px]"></i></div>
+                            Women Empowerment
+                        </li>
+                        <li class="flex items-center gap-3 md:gap-4 text-[12px] md:text-[13px] font-semibold text-gray-200 lg:text-[#2b4222]">
+                            <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/5 lg:bg-[#f0e8d5] flex items-center justify-center shrink-0 border border-white/10 lg:border-none"><i class="fa-solid fa-users text-[#dd8448] lg:text-[#1e3321] text-[11px] md:text-[13px]"></i></div>
+                            Youth & Community Support
+                        </li>
+                        <li class="flex items-center gap-3 md:gap-4 text-[12px] md:text-[13px] font-semibold text-gray-200 lg:text-[#2b4222]">
+                            <div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/5 lg:bg-[#f0e8d5] flex items-center justify-center shrink-0 border border-white/10 lg:border-none"><i class="fa-solid fa-leaf text-[#dd8448] lg:text-[#1e3321] text-[11px] md:text-[13px]"></i></div>
+                            Mental Wellbeing & Positive Living
+                        </li>
+                    </ul>
+
+                    <!-- Professional Call/Donate Button -->
+                    <a href="tel:+918319440047" class="bg-white/10 lg:bg-[#f6c358] text-white lg:text-[#1e3321] border border-white/10 lg:border-none w-full py-3.5 rounded-full flex items-center justify-between px-6 hover:bg-white/20 lg:hover:bg-[#e3b046] transition-colors shadow-md mb-5 relative z-10 block">
+                        <div class="flex gap-3 items-center">
+                            <i class="fa-solid fa-phone text-[#dd8448] lg:text-[#1e3321] text-lg animate-pulse"></i>
+                            <div class="flex flex-col items-start text-left">
+                                <span class="font-bold text-[14px] leading-none">Call to Donate</span>
+                                <span class="text-[10.5px] font-medium mt-1 text-gray-400 lg:text-[#1e3321]">Get involved & be a part of the change</span>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-[12px] text-[#dd8448] lg:text-[#1e3321]"></i>
+                    </a>
+
+                    <div class="flex items-center gap-3 mb-4 relative z-10 px-2">
+                        <hr class="flex-1 border-white/10 lg:border-[#c8d4c3]">
+                        <span class="text-[10px] md:text-[11px] font-bold text-gray-500 lg:text-[#1e3321] uppercase">OR</span>
+                        <hr class="flex-1 border-white/10 lg:border-[#c8d4c3]">
+                    </div>
+
+                    <a href="https://wa.me/918319440047" target="_blank" class="flex items-center justify-center gap-4 text-white lg:text-[#1e3321] group relative z-10">
+                        <div class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform"><i class="fa-brands fa-whatsapp text-white text-2xl"></i></div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] md:text-[11px] text-gray-400 lg:text-[#4a5e4b] font-semibold uppercase tracking-wider mb-0.5">WhatsApp Us</span>
+                            <span class="text-base md:text-lg font-black group-hover:text-[#25D366] transition-colors leading-none">+91 8319440047</span>
+                        </div>
+                    </a>
+
+                    <p class="text-[10px] md:text-[11px] text-gray-500 lg:text-[#4a5e4b] font-medium text-center mt-5 md:mt-6 relative z-10">Let's work together for a<br>brighter, more mindful India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full bg-[#394a2e] text-[#f6c358] py-2.5 md:py-3 mt-auto relative z-10 flex items-center justify-between px-4 md:px-12">
+        <div class="flex items-center gap-3 md:gap-6 text-[8px] sm:text-[9px] md:text-xs font-semibold tracking-widest uppercase overflow-hidden whitespace-nowrap">
+            <i class="fa-solid fa-sun text-yellow-400"></i>
+            <span>Aware Minds</span> <span class="text-white/30">|</span>
+            <span>Compassionate Hearts</span> <span class="text-white/30 hidden sm:inline">|</span>
+            <span class="hidden sm:inline">Empowered Communities</span> <span class="text-white/30 hidden md:inline">|</span>
+            <span class="hidden md:inline">A Brighter India</span>
+            <i class="fa-solid fa-sun text-yellow-400 ml-3 hidden sm:inline"></i>
+        </div>
+        <div class="hidden lg:block cursive-font text-[#f6c358] text-lg xl:text-xl">Small Steps, A Mindful Nation <i class="fa-solid fa-heart text-[10px] xl:text-[12px] ml-1"></i></div>
+    </div>
+</header>
+
+    <section class="cycle-section" id="cycle-section">
+        <div class="bg-half left-half"></div>
+        <div class="bg-half right-half"></div>
+        <div class="cycle-container">
+            <div class="cycle-text slide-in-left">
+                <img src="./assets/download.svg" class="leaf-bg-text" alt="Leaf Background" />
+                <h2>Cycle Of Meditation</h2>
+                <p>
+                    Meditation is a powerful tool that can help you achieve inner peace
+                    and clarity of mind. The cycle of meditation involves a series of
+                    steps that can guide you towards a deeper state of relaxation and
+                    mindfulness. By practicing meditation regularly, you can reduce
+                    stress, improve your focus, and enhance your overall well-being.
+                    Whether you're a beginner or an experienced meditator the cycle of
+                    meditation can be a valuable addition to your daily routine.
+                </p>
+            </div>
+
+            <div class="cycle-diagram slide-in-right">
+                <div class="circle-track">
+                    <div class="node node-1">Problem</div>
+                    <div class="node node-2">Solution</div>
+                    <div class="node node-3">Meditate</div>
+                    <div class="node node-4">Inner Peace</div>
+                    <div class="node node-5">Struggle</div>
+
+                    <img src="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4,16 C4,9 9,4 16,4'/%3E%3Cpolyline points='11,0 17,4 11,9'/%3E%3C/svg%3E" class="cycle-arrow arrow-1" />
+                    <img src="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4,16 C4,9 9,4 16,4'/%3E%3Cpolyline points='11,0 17,4 11,9'/%3E%3C/svg%3E" class="cycle-arrow arrow-2" />
+                    <img src="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4,16 C4,9 9,4 16,4'/%3E%3Cpolyline points='11,0 17,4 11,9'/%3E%3C/svg%3E" class="cycle-arrow arrow-3" />
+                    <img src="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4,16 C4,9 9,4 16,4'/%3E%3Cpolyline points='11,0 17,4 11,9'/%3E%3C/svg%3E" class="cycle-arrow arrow-4" />
+                    <img src="data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4,16 C4,9 9,4 16,4'/%3E%3Cpolyline points='11,0 17,4 11,9'/%3E%3C/svg%3E" class="cycle-arrow arrow-5" />
+
+                    <div class="center-figure">
+                        <img src="./assets/meditation.svg" alt="Meditating Person" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#ECDBB5] py-16 md:py-24 font-['Poppins'] overflow-hidden">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-8 lg:gap-16">
+            <div class="w-full lg:w-[25%] shrink-0 flex flex-col justify-center lg:pb-12 fade-up delay-100">
+                <h2 class="text-5xl md:text-6xl font-bold text-[#1a1a1a] mb-4 leading-[1.1] tracking-tight">What<br>we offer</h2>
+                <p class="text-[#595959] text-base md:text-lg font-medium mb-10 leading-relaxed">Covering mental health, physical balance & emotional peace.</p>
+                <div class="hidden lg:flex gap-4">
+                    <button id="prevBtn" class="w-12 h-12 rounded-full border border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white flex items-center justify-center transition-colors"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="nextBtn" class="w-12 h-12 rounded-full border border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white flex items-center justify-center transition-colors"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-[75%] relative fade-up delay-200">
+                <div class="flex lg:hidden gap-4 mb-6 justify-end">
+                    <button id="prevBtnMobile" class="w-10 h-10 rounded-full border border-[#1a1a1a] text-[#1a1a1a] flex items-center justify-center"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="nextBtnMobile" class="w-10 h-10 rounded-full border border-[#1a1a1a] text-[#1a1a1a] flex items-center justify-center"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div id="carouselTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    <!-- CARD 1 -->
+                    <div class="w-[300px] md:w-[340px] shrink-0 snap-start bg-white flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300">
+                        <div class="relative h-[220px] w-full overflow-hidden bg-gray-200">
+                            <span class="absolute top-5 left-5 z-10 text-white text-[13px] font-bold uppercase tracking-widest drop-shadow-md">MEDITATION</span>
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Meditation">
+                        </div>
+                        <div class="p-7 md:p-8 flex flex-col flex-grow bg-white">
+                            <span class="text-[#888888] text-[12px] font-semibold mb-3">FOR ORGANIZATIONS & YOUTH</span>
+                            <h3 class="text-[24px] font-bold text-[#1a1a1a] leading-tight mb-4">Meditation<br>Sessions</h3>
+                            <p class="text-[#555555] text-[14px] leading-relaxed mb-10 font-light">Find stillness. Build awareness. Transform within. A journey to self-discovery and lasting peace.</p>
+                            
+                            <div class="mt-auto flex flex-col gap-3">
+                                <a href="tel:+918319440047" class="flex items-center gap-3 text-[#566e4a] font-semibold hover:opacity-80 bg-gray-50 p-2 rounded-lg transition-all border border-gray-100">
+                                    <i class="fa-solid fa-phone-volume text-[20px] text-[#A1772A]"></i>
+                                    <span class="text-[14px]">Call to Enquire</span>
+                                </a>
+                                <div class="flex items-center gap-3 text-[#A1772A] font-semibold pl-2">
+                                    <i class="fa-regular fa-circle-right text-[22px]"></i>
+                                    <span class="text-[14px]">Find out more</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+         <!-- CARD 2 (VIP Dark Mode - Exact Size Fix & Badge Moved) -->
+                    <div class="relative w-[300px] md:w-[340px] shrink-0 snap-start group cursor-pointer flex flex-col">
+                        
+                        <!-- Background Glow Layer -->
+                        <div class="absolute inset-0 rounded-[20px] blur-[24px] opacity-30 z-0 bg-gradient-to-tr from-[#dd8448] via-transparent to-[#dd8448] pointer-events-none"></div>
+
+                        <!-- Electric Border Layers -->
+                        <div class="absolute inset-0 z-20 pointer-events-none">
+                            <div class="absolute inset-0 border-2 border-[#dd8448]/60 rounded-[20px] blur-[1px]"></div>
+                            <div class="absolute inset-0 border-2 border-[#dd8448] rounded-[20px] blur-[4px]"></div>
+                            <div class="absolute inset-0 border-2 border-[#dd8448]/50 rounded-[20px] pr-[3px] pb-[3px]">
+                                <div class="w-full h-full border-2 border-[#dd8448] rounded-[20px] -mt-[2px] -ml-[2px]" style="filter: url(#turbulent-displace);"></div>
+                            </div>
+                        </div>
+
+                        <!-- Main Content (Dark Theme) -->
+                        <div class="relative z-10 flex flex-col flex-grow bg-[#161616] rounded-[20px] overflow-hidden shadow-2xl border border-white/5">
+                            
+                            <!-- Image Section -->
+                            <div class="relative h-[220px] w-full overflow-hidden bg-black shrink-0">
+                                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="Counselling">
+                                
+                                <!-- Bottom dark fade to blend image with text area -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#161616] via-black/20 to-transparent z-10 pointer-events-none"></div>
+
+                                <!-- Premium Badge (Moved to bottom-left to avoid the face) -->
+                                <span class="absolute bottom-4 left-5 z-20 text-white text-[11px] font-bold uppercase tracking-widest bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">⭐ MOST REQUESTED</span>
+                            </div>
+                            
+                            <!-- Text Section -->
+                            <div class="p-7 md:p-8 flex flex-col flex-grow relative z-20 bg-[#161616]">
+                                <span class="text-[#dd8448] text-[12px] font-bold tracking-wider mb-3">WOMEN & RELATIONSHIPS</span>
+                                <h3 class="text-[24px] font-bold text-white leading-tight mb-4">Confidential<br>Counselling</h3>
+                                <p class="text-gray-400 text-[14px] leading-relaxed mb-10 font-light">Sometimes, you don't need advice. You just need someone who truly listens to you.</p>
+                                
+                                <!-- Dark Mode Buttons -->
+                                <div class="mt-auto flex flex-col gap-3">
+                                    <a href="tel:+918319440047" class="flex items-center gap-3 text-white font-semibold hover:bg-white/10 bg-white/5 p-2 rounded-lg transition-all border border-white/10 shadow-md">
+                                        <i class="fa-solid fa-phone-volume text-[20px] text-[#dd8448]"></i>
+                                        <span class="text-[14px]">Call to Enquire</span>
+                                    </a>
+                                    <div class="flex items-center gap-3 text-[#dd8448] font-semibold pl-2 group-hover:translate-x-1 transition-transform">
+                                        <i class="fa-regular fa-circle-right text-[22px]"></i>
+                                        <span class="text-[14px]">Find out more</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="w-[300px] md:w-[340px] shrink-0 snap-start bg-white flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300">
+                        <div class="relative h-[220px] w-full overflow-hidden bg-gray-200">
+                            <span class="absolute top-5 left-5 z-10 text-white text-[13px] font-bold uppercase tracking-widest drop-shadow-md">YOGA</span>
+                            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Yoga">
+                        </div>
+                        <div class="p-7 md:p-8 flex flex-col flex-grow bg-white">
+                            <span class="text-[#888888] text-[12px] font-semibold mb-3">MIND & BODY BALANCE</span>
+                            <h3 class="text-[24px] font-bold text-[#1a1a1a] leading-tight mb-4">Yoga &<br>Mindfulness</h3>
+                            <p class="text-[#555555] text-[14px] leading-relaxed mb-10 font-light">Balance your body. Calm your mind. Be present. Join sessions tailored for holistic well-being.</p>
+                            
+                            <div class="mt-auto flex flex-col gap-3">
+                                <a href="tel:+918319440047" class="flex items-center gap-3 text-[#566e4a] font-semibold hover:opacity-80 bg-gray-50 p-2 rounded-lg transition-all border border-gray-100">
+                                    <i class="fa-solid fa-phone-volume text-[20px] text-[#A1772A]"></i>
+                                    <span class="text-[14px]">Call to Enquire</span>
+                                </a>
+                                <div class="flex items-center gap-3 text-[#A1772A] font-semibold pl-2">
+                                    <i class="fa-regular fa-circle-right text-[22px]"></i>
+                                    <span class="text-[14px]">Find out more</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="w-[300px] md:w-[340px] shrink-0 snap-start bg-white flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300">
+                        <div class="relative h-[220px] w-full overflow-hidden bg-gray-200">
+                            <span class="absolute top-5 left-5 z-10 text-white text-[13px] font-bold uppercase tracking-widest drop-shadow-md">SUPPORT</span>
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Women's Special">
+                        </div>
+                        <div class="p-7 md:p-8 flex flex-col flex-grow bg-white">
+                            <span class="text-[#888888] text-[12px] font-semibold mb-3">SAFE SPACE</span>
+                            <h3 class="text-[24px] font-bold text-[#1a1a1a] leading-tight mb-4">Women's<br>Special</h3>
+                            <p class="text-[#555555] text-[14px] leading-relaxed mb-10 font-light">A safe space to express, understand and reconnect with yourself through guided support.</p>
+                            
+                            <div class="mt-auto flex flex-col gap-3">
+                                <a href="tel:+918319440047" class="flex items-center gap-3 text-[#566e4a] font-semibold hover:opacity-80 bg-gray-50 p-2 rounded-lg transition-all border border-gray-100">
+                                    <i class="fa-solid fa-phone-volume text-[20px] text-[#A1772A]"></i>
+                                    <span class="text-[14px]">Call to Enquire</span>
+                                </a>
+                                <div class="flex items-center gap-3 text-[#A1772A] font-semibold pl-2">
+                                    <i class="fa-regular fa-circle-right text-[22px]"></i>
+                                    <span class="text-[14px]">Find out more</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Hover Icons for How We Are Changing Lives -->
+    <section class="bg-[#F6E5C9] py-20 px-6 overflow-hidden">
+        <h2 class="text-4xl md:text-5xl font-semibold text-center text-[#3C3A3A] mb-16 fade-up">How We Are Changing Lives</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-[1300px] mx-auto text-center">
+            
+            <div class="fade-up delay-100 flex flex-col items-center group cursor-pointer">
+                <div class="w-20 h-20 mb-6 bg-[#C09F64] mask-icon-container" style="-webkit-mask: url('./assets/harmony.svg') center/contain no-repeat; mask: url('./assets/harmony.svg') center/contain no-repeat;" title="Harmony"></div>
+                <h3 class="text-2xl font-medium text-[#C09F64] group-hover:text-[#5a6a4c] transition-colors mb-4">Harmony</h3>
+                <p class="text-sm text-[#3C3A3A] leading-relaxed">Harmony in meditation creates balance within ourselves and our environment, enhancing focus and enriching our daily lives.</p>
+            </div>
+            
+            <div class="fade-up delay-200 flex flex-col items-center group cursor-pointer">
+                <div class="w-20 h-20 mb-6 bg-[#C09F64] mask-icon-container" style="-webkit-mask: url('./assets/growth.svg') center/contain no-repeat; mask: url('./assets/growth.svg') center/contain no-repeat;" title="Growth"></div>
+                <h3 class="text-2xl font-medium text-[#C09F64] group-hover:text-[#5a6a4c] transition-colors mb-4">Growth</h3>
+                <p class="text-sm text-[#3C3A3A] leading-relaxed">Meditation enhances personal growth by cultivating mindfulness, focus, and emotional resilience.</p>
+            </div>
+            
+            <div class="fade-up delay-300 flex flex-col items-center group cursor-pointer">
+                <div class="w-20 h-20 mb-6 bg-[#C09F64] mask-icon-container" style="-webkit-mask: url('./assets/healing.svg') center/contain no-repeat; mask: url('./assets/healing.svg') center/contain no-repeat;" title="Healing"></div>
+                <h3 class="text-2xl font-medium text-[#C09F64] group-hover:text-[#5a6a4c] transition-colors mb-4">Healing</h3>
+                <p class="text-sm text-[#3C3A3A] leading-relaxed">Meditation is a powerful tool for reconnecting with your inner self, reducing stress, and promoting emotional balance.</p>
+            </div>
+            
+            <div class="fade-up delay-400 flex flex-col items-center group cursor-pointer">
+                <div class="w-20 h-20 mb-6 bg-[#C09F64] mask-icon-container" style="-webkit-mask: url('./assets/spirituality.svg') center/contain no-repeat; mask: url('./assets/spirituality.svg') center/contain no-repeat;" title="Spirituality"></div>
+                <h3 class="text-2xl font-medium text-[#C09F64] group-hover:text-[#5a6a4c] transition-colors mb-4">Spirituality</h3>
+                <p class="text-sm text-[#3C3A3A] leading-relaxed">Meditation connects with your inner self, cultivating peace and awareness for a deeper understanding of life.</p>
+            </div>
+            
+        </div>
+    </section>
+<section class="bg-[#ECDBB5] pt-12 pb-24 px-4 overflow-hidden relative">
+        <div class="flex items-center justify-center w-full max-w-4xl lg:max-w-6xl mx-auto mt-8 md:mt-10 mb-8 md:mb-10 opacity-80">
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+            <div class="px-4"><div class="w-10 h-10 md:w-16 md:h-16 bg-[#A1772A]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div></div>
+            <div class="flex-1 border-t-[1px] border-dashed border-[#A1772A]"></div>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-semibold text-center text-[#3d3d3d] mb-12 md:mb-16 fade-up">Our Clients Say</h2>
+
+        <div class="max-w-[1100px] mx-auto relative fade-up delay-200">
+            <!-- Arrows Mobile & Desktop Visible -->
+            <!-- Positioned outside the main image/text box for easy clicking on mobile -->
+            <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between z-30 pointer-events-none px-2 md:-mx-12">
+                <button id="testiPrev" class="pointer-events-auto text-[#3d3d3d] hover:text-[#b89768] transition-colors focus:outline-none bg-white/50 md:bg-transparent rounded-full p-2 md:p-0 shadow-sm md:shadow-none"><i class="fa-solid fa-arrow-left-long text-xl md:text-3xl"></i></button>
+                <button id="testiNext" class="pointer-events-auto text-[#3d3d3d] hover:text-[#b89768] transition-colors focus:outline-none bg-white/50 md:bg-transparent rounded-full p-2 md:p-0 shadow-sm md:shadow-none"><i class="fa-solid fa-arrow-right-long text-xl md:text-3xl"></i></button>
+            </div>
+
+            <div class="overflow-hidden">
+                <div id="testiTrack" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Testimonial 1 -->
+                    <div class="min-w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12">
+                        <div class="w-[260px] h-[320px] md:w-[320px] md:h-[420px] rounded-t-full overflow-hidden flex-shrink-0 relative z-0 slide-in-left">
+                            <img src="./assets/dheeraj.jpeg" class="w-full h-full object-cover" alt="Client 1">
+                        </div>
+                        <div class="bg-[#a98544] text-[#fdfaf2] p-6 md:p-12 w-full md:w-auto md:max-w-lg md:-ml-16 relative z-10 -mt-12 md:mt-12 shadow-lg slide-in-right delay-200">
+                            <p class="text-[0.95rem] md:text-[1.05rem] font-light leading-relaxed md:leading-loose mb-6 md:mb-8">Meditating with Manisha yadav Ji at Blessing Welfare Society has transformed my life. As a Employee and working professional, I used to feel constantly stressed. Now, I've gained clarity, let go of stress, and feel more present.🙏</p>
+                            <div class="w-10 h-[1px] bg-white mb-4 opacity-70"></div>
+                            <p class="font-medium text-base md:text-lg">Mr. Dheeraj Aldak</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="min-w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12">
+                        <div class="w-[260px] h-[320px] md:w-[320px] md:h-[420px] rounded-t-full overflow-hidden flex-shrink-0 relative z-0">
+                            <img src="./assets/suhana.jpeg" class="w-full h-full object-cover" alt="Client 2">
+                        </div>
+                        <div class="bg-[#a98544] text-[#fdfaf2] p-6 md:p-12 w-full md:w-auto md:max-w-lg md:-ml-16 relative z-10 -mt-12 md:mt-12 shadow-lg">
+                            <p class="text-[0.95rem] md:text-[1.05rem] font-light leading-relaxed md:leading-loose mb-6 md:mb-8">The meditation techniques taught here are incredibly grounding. I strongly recommend this to anyone looking to find peace amidst a chaotic schedule. It truly is a life-changing and beautiful experience.</p>
+                            <div class="w-10 h-[1px] bg-white mb-4 opacity-70"></div>
+                            <p class="font-medium text-base md:text-lg">Mrs. Suhana Sheik</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="min-w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12">
+                        <div class="w-[260px] h-[320px] md:w-[320px] md:h-[420px] rounded-t-full overflow-hidden flex-shrink-0 relative z-0">
+                            <img src="./assets/tushar.jpeg" class="w-full h-full object-cover" alt="Client 3">
+                        </div>
+                        <div class="bg-[#a98544] text-[#fdfaf2] p-6 md:p-12 w-full md:w-auto md:max-w-lg md:-ml-16 relative z-10 -mt-12 md:mt-12 shadow-lg">
+                            <p class="text-[0.95rem] md:text-[1.05rem] font-light leading-relaxed md:leading-loose mb-6 md:mb-8">Confidential counselling gave me the exact clarity I was looking for in my career. Manisha ji's guidance is so pure, positive and accurate. I highly recommend Blessing welfare society  to everyone seeking direction!</p>
+                            <div class="w-10 h-[1px] bg-white mb-4 opacity-70"></div>
+                            <p class="font-medium text-base md:text-lg">Mr. Tushar Pawar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-3 mt-10 md:mt-12" id="testiDots">
+                <!-- Dots generated by JS, or keep existing ones. Keeping existing for structure, JS will update them -->
+                <button class="w-2.5 h-2.5 rounded-full border border-gray-500 bg-gray-500 transition-colors focus:outline-none" data-index="0"></button>
+                <button class="w-2.5 h-2.5 rounded-full border border-gray-500 bg-transparent transition-colors focus:outline-none" data-index="1"></button>
+                <button class="w-2.5 h-2.5 rounded-full border border-gray-500 bg-transparent transition-colors focus:outline-none" data-index="2"></button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="flex flex-col md:flex-row w-full min-h-[700px] overflow-hidden">
+        <div class="w-full md:w-1/2 relative flex flex-col items-center justify-center p-10 text-center min-h-[400px] slide-in-left" style="background-image: url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1000&auto=format&fit=crop'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-[#8c7b5b]/70 mix-blend-multiply"></div>
+            <div class="relative z-10 flex flex-col items-center max-w-md mx-auto text-[#fdfaf2]">
+                <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center mb-8 shadow-xl">
+                    <img src="./assets/contactus.svg" class="w-16 h-16 object-contain" alt="Contact Icon">
+                </div>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 italic leading-relaxed">"The thing about meditation is: You become more and more you."</h2>
+                <div class="w-8 h-[2px] bg-white mb-2"></div>
+                <p class="font-medium tracking-wide">David Lynch</p>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 bg-[#ECDBB5] p-10 md:p-16 flex flex-col justify-center slide-in-right delay-200">
+            <div class="max-w-md mx-auto w-full">
+                <h2 class="text-4xl font-semibold text-[#5a6a4c] mb-2 text-center">Let's Stay Connected</h2>
+                <p class="text-center text-[#3d3d3d] mb-10">Fill your details to <span class="font-bold">Transform Today!</span></p>
+
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                    <div class="flex flex-col">
+                        <label class="text-sm text-[#3d3d3d] mb-1">First name</label>
+                        <input type="text" id="fname" name="First Name" required class="w-full bg-[#e3d3b0] border-none px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] transition-shadow">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm text-[#3d3d3d] mb-1">Last name</label>
+                        <input type="text" id="lname" name="Last Name" class="w-full bg-[#e3d3b0] border-none px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] transition-shadow">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm text-[#3d3d3d] mb-1">Email</label>
+                        <input type="email" id="email" name="Email" required class="w-full bg-[#e3d3b0] border-none px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] transition-shadow">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm text-[#3d3d3d] mb-1">Phone</label>
+                        <input type="tel" id="phone" name="Phone" required class="w-full bg-[#e3d3b0] border-none px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c]">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm text-[#3d3d3d] mb-1">Interested in <span class="text-red-500">*</span></label>
+                        <div class="relative w-full">
+                            <select id="interest" name="Interested In" required class="w-full bg-[#e3d3b0] border-none px-4 py-3 appearance-none focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] cursor-pointer">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Meditation Classes">Meditation Classes</option>
+                                <option value="Yoga Sessions">Yoga Sessions</option>
+                                <option value="Personal Consultation">Personal Consultation</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <button type="button" id="whatsappBtn" class="w-full bg-[#25D366] text-white font-medium py-3.5 rounded hover:bg-[#20b858] transition-colors flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Send Message on WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#5a6a4c] text-[#e8daba] py-16 px-6 lg:px-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
+                <div class="lg:col-span-5 flex flex-col gap-8 w-full mx-auto md:max-w-md lg:max-w-full lg:mx-0 slide-in-left delay-100">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="relative border-b border-[#e8daba]/50 pb-2 flex justify-between items-center w-full">
+                        <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                        <input type="hidden" name="subject" value="New Newsletter Subscriber!">
+                        <input type="email" name="Newsletter Email" placeholder="Enter Your Email" required class="bg-transparent border-none outline-none text-sm text-[#e8daba] placeholder-[#e8daba]/70 w-full pr-4">
+                        <button type="submit" class="text-xl hover:text-white transition-colors cursor-pointer shrink-0"><i class="fa-solid fa-arrow-right-long"></i></button>
+                    </form>
+                    <div class="w-full h-48 sm:h-56 bg-gray-300 rounded overflow-hidden border-2 border-[#e8daba]/20">
+                        <iframe src="https://maps.google.com/maps?q=Chhindwara,%20Madhya%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center sm:text-left text-sm md:text-base slide-in-right delay-200">
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Menu</h3>
+                        <a href="index.html" class="hover:text-white transition-colors font-light">Home</a>
+                        <a href="contact.html" class="hover:text-white transition-colors font-light">Contact Us</a>
+                        <a href="blog.html" class="hover:text-white transition-colors font-light">Blogs</a>
+                        <a href="terms.html" class="hover:text-white transition-colors font-light">Terms & Policies</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Contact</h3>
+                        <p class="font-light">Tel: +91 8319440047</p>
+                        <p class="font-light break-all">Email: blessingshubwelfaresociety@gmail.com</p>
+                        <div class="font-light mt-1">
+                            <p>DIVINE SPACE, Khajri Road, Chhindwara, MP</p>
+                            <p>480001</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h3 class="text-[#e2bc68] font-semibold text-lg tracking-wide mb-2 uppercase">Socials</h3>
+                        <a href="https://www.facebook.com/share/1LoTT9etfn/" target="_blank" class="hover:text-white transition-colors font-light">Facebook</a>
+                        <a href="https://www.linkedin.com" target="_blank" class="hover:text-white transition-colors font-light">LinkedIn</a>
+                        <a href="https://www.instagram.com/mission_lakshya_manisha_yadav?stkn=MWh0a2tjczdzNDMwYw==" target="_blank" class="hover:text-white transition-colors font-light">Instagram</a>
+                    </div>
+                </div>
+            </div>
+    <div class="flex flex-col items-center justify-center pt-8 border-t border-[#e8daba]/20 gap-4 text-center fade-up delay-300">
+                <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-[#e2bc68]">
+                    <!-- SVG Rose Logo replacing fa-om -->
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-[#e2bc68]" style="-webkit-mask: url('./assets/svgrose.svg') center/contain no-repeat; mask: url('./assets/svgrose.svg') center/contain no-repeat;"></div>
+                    <div class="leading-none text-center sm:text-left mt-2 sm:mt-0">
+                        <span class="cursive-font text-2xl md:text-4xl">Blessing Welfare Society</span>
+                    </div>
+                </div>
+                <p class="text-xs md:text-sm font-light mt-2 max-w-md mx-auto">Copyright 2026 © Tushar Pawar || 9630947125. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="appointmentModal" class="fixed inset-0 bg-black/70 z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
+        <div class="bg-[#F6E5C9] w-full max-w-lg rounded-xl shadow-2xl overflow-visible relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-[#5a6a4c] hover:text-black text-2xl z-10 focus:outline-none"><i class="fa-solid fa-xmark"></i></button>
+            <div class="p-5 sm:p-8">
+                <h2 class="text-3xl font-semibold text-[#5a6a4c] mb-1 text-center font-serif">Book Appointment</h2>
+                <p class="text-center text-[#3d3d3d] mb-6 text-sm">Schedule your session securely.</p>
+
+                <form id="appointmentForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                    <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="appFname" name="First Name" placeholder="First Name" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                        <input type="text" id="appLname" name="Last Name" placeholder="Last Name" class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    </div>
+                    <input type="email" id="appEmail" name="Email" placeholder="Email Address" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    <div class="w-full">
+                        <input type="tel" id="appPhone" name="Phone" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="date" id="appDate" name="Preferred Date" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                        <input type="time" id="appTime" name="Preferred Time" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                    </div>
+                    <select id="appService" name="Service" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d] cursor-pointer">
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="Meditation Class">Meditation Class</option>
+                        <option value="Yoga Session">Yoga Session</option>
+                        <option value="Personal Consultation">Personal Consultation</option>
+                    </select>
+
+                    <div class="mt-6 pt-2 flex flex-col gap-3">
+                        <a href="tel:+918319440047" class="w-full bg-[#5a6a4c] text-[#ECDBB5] font-medium py-3 rounded hover:bg-[#4a583e] transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                        <button type="button" id="appWhatsappBtn" class="w-full bg-[#25D366] text-white font-medium py-3 rounded hover:bg-[#20b858] transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Book Appointment via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
