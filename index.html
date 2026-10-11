@@ -840,7 +840,7 @@
         </div>
     </footer>
 
-    <div id="appointmentModal" class="fixed inset-0 bg-black/70 z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
+<div id="appointmentModal" class="fixed inset-0 bg-black/70 z-[3000] flex items-center justify-center hidden opacity-0 transition-opacity duration-300 px-4">
         <div class="bg-[#F6E5C9] w-full max-w-lg rounded-xl shadow-2xl overflow-visible relative transform scale-95 transition-transform duration-300" id="modalContent">
             <button id="closeModalBtn" class="absolute top-4 right-4 text-[#5a6a4c] hover:text-black text-2xl z-10 focus:outline-none"><i class="fa-solid fa-xmark"></i></button>
             <div class="p-5 sm:p-8">
@@ -849,19 +849,31 @@
 
                 <form id="appointmentForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
                     <input type="hidden" name="access_key" value="45a55199-5d9b-4505-a869-77155a52f0a0">
+                    
                     <div class="flex flex-col sm:flex-row gap-4">
                         <input type="text" id="appFname" name="First Name" placeholder="First Name" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
                         <input type="text" id="appLname" name="Last Name" placeholder="Last Name" class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
                     </div>
+                    
                     <input type="email" id="appEmail" name="Email" placeholder="Email Address" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                    
                     <div class="w-full">
-                        <input type="tel" id="appPhone" name="Phone" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded">
+                        <input type="tel" id="appPhone" name="Phone" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded" placeholder="Phone Number">
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <input type="date" id="appDate" name="Preferred Date" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
-                        <input type="time" id="appTime" name="Preferred Time" required class="w-full sm:w-1/2 bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d]">
+                    
+                    <!-- Date & Time Inputs Fixed with Labels -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-1">
+                        <div class="w-full sm:w-1/2 relative">
+                            <span class="absolute -top-2.5 left-3 bg-[#F6E5C9] px-1 text-[10px] font-bold text-[#5a6a4c] uppercase z-10">Preferred Date</span>
+                            <input type="date" id="appDate" name="Preferred Date" required class="w-full bg-white border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#1a1a1a] block appearance-none">
+                        </div>
+                        <div class="w-full sm:w-1/2 relative">
+                            <span class="absolute -top-2.5 left-3 bg-[#F6E5C9] px-1 text-[10px] font-bold text-[#5a6a4c] uppercase z-10">Preferred Time</span>
+                            <input type="time" id="appTime" name="Preferred Time" required class="w-full bg-white border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#1a1a1a] block appearance-none">
+                        </div>
                     </div>
-                    <select id="appService" name="Service" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d] cursor-pointer">
+                    
+                    <select id="appService" name="Service" required class="w-full bg-white/60 border border-[#d4c39e] px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#5a6a4c] rounded text-[#3d3d3d] cursor-pointer mt-1">
                         <option value="" disabled selected>Select a Service</option>
                         <option value="Meditation Class">Meditation Class</option>
                         <option value="Yoga Session">Yoga Session</option>
