@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 fullPhone = getVal(contactForm, 'phone', 'Phone');
             }
 
-            const whatsappNumber = "91831944047";
+            const whatsappNumber = "918319440047";
             let message = `Namaste Mission Lakshya! 🙏%0A%0AMera naam ${fname} ${lname} hai.`;
 
             if (interest) message += `%0AMai "${interest}" me interested hu.`;
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 fullPhone = getVal(appForm, 'appPhone', 'Phone');
             }
 
-            const whatsappNumber = "91831944047";
+            const whatsappNumber = "918319440047";
             const message = `Namaste Mission Lakshya! 🙏%0A%0AMujhe ek Appointment book karni hai.%0A%0A*Details:*%0AName: ${fname} ${lname}%0AService: ${service}%0ADate: ${date}%0ATime: ${time}%0A%0A*Contact Info:*%0AEmail: ${email}%0APhone: ${fullPhone}`;
 
             window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
