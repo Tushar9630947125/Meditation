@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const whatsappNumber = "919630947125";
-            const message = `Namaste Tathastu Vibes! 🙏%0A%0AMujhe ek Appointment book karni hai.%0A%0A*Details:*%0AName: ${fname} ${lname}%0AService: ${service}%0ADate: ${date}%0ATime: ${time}%0A%0A*Contact Info:*%0AEmail: ${email}%0APhone: ${fullPhone}`;
+            const message = `Namaste Mission Lakshya! 🙏%0A%0AMujhe ek Appointment book karni hai.%0A%0A*Details:*%0AName: ${fname} ${lname}%0AService: ${service}%0ADate: ${date}%0ATime: ${time}%0A%0A*Contact Info:*%0AEmail: ${email}%0APhone: ${fullPhone}`;
 
             window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
             appForm.reset();
