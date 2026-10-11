@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 fullPhone = getVal(contactForm, 'phone', 'Phone');
             }
 
-            const whatsappNumber = "919630947125"; 
+            const whatsappNumber = "91831944047"; 
             let message = `Namaste Tathastu Vibes! 🙏%0A%0AMera naam ${fname} ${lname} hai.`;
             
             if (interest) message += `%0AMai "${interest}" me interested hu.`;
